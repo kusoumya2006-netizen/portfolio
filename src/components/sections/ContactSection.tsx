@@ -1,12 +1,23 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, Linkedin, Github, FileText, Send, ArrowUpRight, CheckCircle2, AlertCircle } from 'lucide-react'
+import { Mail, Phone, Linkedin, Github, FileText, Send, ArrowUpRight, CheckCircle2, AlertCircle, Copy, Check } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' })
   const [errors, setErrors] = useState<{ [key: string]: string }>({})
   const [submitted, setSubmitted] = useState(false)
+  const [copiedKey, setCopiedKey] = useState<string | null>(null)
+
+  const copyToClipboard = async (text: string, key: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopiedKey(key)
+      setTimeout(() => setCopiedKey(null), 2000)
+    } catch {
+      // fallback
+    }
+  }
 
   const validate = () => {
     const errs: { [key: string]: string } = {}
@@ -69,35 +80,77 @@ export default function ContactSection() {
             <div className="glass-card rounded-3xl p-8 border border-sage/20 space-y-6">
               
               {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl glass-panel border border-sage/30 flex items-center justify-center shrink-0 text-sage">
-                  <Mail size={18} />
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl glass-panel border border-sage/30 flex items-center justify-center shrink-0 text-sage">
+                    <Mail size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-mono uppercase text-ivory/40 mb-1">Direct Email</p>
+                    <a
+                      href={`mailto:${PROFILE.contact.email}`}
+                      className="text-ivory hover:text-sage font-medium text-base transition-colors"
+                    >
+                      {PROFILE.contact.email}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-mono uppercase text-ivory/40 mb-1">Direct Email</p>
-                  <a
-                    href={`mailto:${PROFILE.contact.email}`}
-                    className="text-ivory hover:text-sage font-medium text-base transition-colors"
-                  >
-                    {PROFILE.contact.email}
-                  </a>
-                </div>
+
+                <button
+                  onClick={() => copyToClipboard(PROFILE.contact.email, 'email')}
+                  className="px-2.5 py-1 rounded-lg glass-panel border border-sage/20 hover:border-sage/40 text-xs font-mono text-sage flex items-center gap-1 transition-colors self-center shrink-0"
+                  title="Copy email to clipboard"
+                  aria-label="Copy email address"
+                >
+                  {copiedKey === 'email' ? (
+                    <>
+                      <Check size={12} className="text-champagne" />
+                      <span className="text-champagne">Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={12} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
               </div>
 
               {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl glass-panel border border-sage/30 flex items-center justify-center shrink-0 text-sage">
-                  <Phone size={18} />
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl glass-panel border border-sage/30 flex items-center justify-center shrink-0 text-sage">
+                    <Phone size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-mono uppercase text-ivory/40 mb-1">Phone</p>
+                    <a
+                      href={`tel:${PROFILE.contact.phone}`}
+                      className="text-ivory hover:text-sage font-mono text-base transition-colors"
+                    >
+                      {PROFILE.contact.phone}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-mono uppercase text-ivory/40 mb-1">Phone</p>
-                  <a
-                    href={`tel:${PROFILE.contact.phone}`}
-                    className="text-ivory hover:text-sage font-mono text-base transition-colors"
-                  >
-                    {PROFILE.contact.phone}
-                  </a>
-                </div>
+
+                <button
+                  onClick={() => copyToClipboard(PROFILE.contact.phone, 'phone')}
+                  className="px-2.5 py-1 rounded-lg glass-panel border border-sage/20 hover:border-sage/40 text-xs font-mono text-sage flex items-center gap-1 transition-colors self-center shrink-0"
+                  title="Copy phone to clipboard"
+                  aria-label="Copy phone number"
+                >
+                  {copiedKey === 'phone' ? (
+                    <>
+                      <Check size={12} className="text-champagne" />
+                      <span className="text-champagne">Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={12} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
               </div>
 
               {/* LinkedIn */}
