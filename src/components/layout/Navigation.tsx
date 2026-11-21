@@ -46,9 +46,19 @@ export default function Navigation({ onReplayIntro }: { onReplayIntro?: () => vo
       }
     }
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [menuOpen])
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -169,7 +179,12 @@ export default function Navigation({ onReplayIntro }: { onReplayIntro?: () => vo
 
       {/* Mobile Single-Page Slide-out Drawer */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0e1613]/95 backdrop-blur-xl flex flex-col justify-center px-8 lg:hidden">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation"
+          className="fixed inset-0 z-40 bg-[#0e1613]/95 backdrop-blur-xl flex flex-col justify-center px-8 lg:hidden"
+        >
           <div className="flex flex-col gap-5 mb-8">
             {NAV_SECTIONS.map(item => {
               const targetId = item.href.replace('#', '')
