@@ -162,28 +162,35 @@ export default function SkillsSection() {
             </h3>
 
             <div className="space-y-4">
-              {CERTIFICATIONS.map((cert, idx) => (
+              {CERTIFICATIONS.map((cert) => (
                 <div
                   key={cert.name}
-                  className="glass-card rounded-2xl p-5 border border-sage/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                  className="glass-card rounded-2xl p-5 border border-sage/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-sage/40 transition-all duration-300 group"
                 >
-                  <div>
-                    <h4 className="font-sans text-base text-ivory font-semibold mb-1">
-                      {cert.name}
-                    </h4>
-                    <p className="text-xs font-mono text-ivory/50">
-                      Issuer: <span className="text-sage">{cert.provider}</span>
-                      {cert.credentialId && (
-                        <span className="ml-2 pl-2 border-l border-sage/20 text-ivory/40">
-                          ID: {cert.credentialId}
-                        </span>
-                      )}
-                    </p>
+                  <div className="flex items-start gap-3.5">
+                    <div className="w-8 h-8 rounded-xl bg-sage/10 border border-sage/30 flex items-center justify-center text-sage shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                      <CheckCircle2 size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-sans text-base text-ivory font-semibold mb-1 group-hover:text-champagne transition-colors">
+                        {cert.name}
+                      </h4>
+                      <p className="text-xs font-mono text-ivory/50">
+                        Issuer: <span className="text-sage font-medium">{cert.provider}</span>
+                        {cert.credentialId && (
+                          <span className="ml-2 pl-2 border-l border-sage/20 text-ivory/40">
+                            ID: <span className="font-mono text-ivory/60">{cert.credentialId}</span>
+                          </span>
+                        )}
+                      </p>
+                    </div>
                   </div>
 
-                  <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-pine border border-sage/30 text-sage uppercase tracking-wider w-fit shrink-0">
-                    {cert.badge}
-                  </span>
+                  <div className="flex items-center gap-2 shrink-0 self-start sm:self-center">
+                    <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-pine border border-sage/30 text-sage uppercase tracking-wider">
+                      {cert.badge}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
