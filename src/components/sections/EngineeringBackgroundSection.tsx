@@ -56,6 +56,28 @@ export default function EngineeringBackgroundSection() {
               <p className="text-xs text-ivory/45 font-mono">
                 {PROFILE.education.location} · September 2024 – June 2028
               </p>
+              {/* Core Coursework Badges */}
+              <div className="mt-6 pt-5 border-t border-sage/15">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-ivory/50 mb-3">
+                  Key Engineering Coursework &amp; Foundations
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    'Data Structures & Algorithms',
+                    'Database Management Systems',
+                    'Object-Oriented Programming (Java/C++)',
+                    'Computer Networks',
+                    'Operating Systems & Concurrency'
+                  ].map((course) => (
+                    <span
+                      key={course}
+                      className="px-2.5 py-1 rounded-lg bg-pine/70 border border-sage/20 text-[10px] font-mono text-ivory/70 hover:text-sage hover:border-sage/40 transition-colors"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Bottom Two-Metric Stat Boxes */}
