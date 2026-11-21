@@ -39,10 +39,10 @@ A bespoke, editorial portfolio web application for **Soumya Kumar** (B.E. Comput
 - **NetWatch**: Real-time distributed network telemetry logger with SQLite and latency monitoring.
 
 ### 5. Design Archive & Brand Identity
-- **Quantum Computing and Intelligence Club (QCIC)**: Official monochromatic silver brand identity, quantum waveform geometry, and lattice structure.
-- **QCIC Core Team 2026–27**: 9-page leadership announcement design draft and editorial concept with vintage grain and space-age minimalism.
-- **STTP Certificate Series**: Academic accreditation credential design for Faculty and Student programs.
+- **OFFSCRIPT**: Creator-oriented media brand identity centered on pop culture, music, fashion, and unfiltered opinions ("BREAK THE FORMAT. NOT YOUR VOICE.").
+- **VÉLORA — FORM / 001 Daily Skin Serum**: Conceptual luxury skincare brand identity, minimalist packaging, and intentional art direction ("SKIN, WITHOUT THE NOISE.").
 - **Mission: Find Nemo**: CyberNova & AIT tech quest campaign visual identity and underwater cyber-aesthetic.
+- **STTP Certificate Series**: Academic accreditation credential design for Faculty and Student programs.
 - **Gandhi Jayanti**: Commemorative editorial collage blending historical khadi textures and modern typography.
 
 ### 6. Experience & Leadership Timeline

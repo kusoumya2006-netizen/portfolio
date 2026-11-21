@@ -75,6 +75,8 @@ export interface DesignWork {
   editUrl: string | null;
   isIdentity: boolean;
   accentColor: string;
+  gallery?: { label: string; url: string }[];
+  brandMessage?: string;
 }
 
 export interface JourneyItem {

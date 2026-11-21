@@ -34,12 +34,12 @@ function CanvaPreviewCard({
         <div className="flex items-center justify-between text-xs font-mono text-ivory/50 pb-3 mb-3 border-b border-sage/15">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse" />
-            <span className="tracking-widest uppercase">SVCE CANVA ARCHIVE</span>
+            <span className="tracking-widest uppercase">CREATIVE PORTFOLIO</span>
           </div>
           <span className="text-sage font-semibold tracking-wider font-mono">{work.modNumber}</span>
         </div>
 
-        {/* Real Canva Artwork Preview Area with Loading Shimmer & Smooth Reveal */}
+        {/* Real Production Artwork Preview Area with Loading Shimmer & Smooth Reveal */}
         <div
           className={`relative w-full ${work.aspectRatio} rounded-2xl overflow-hidden bg-[#0a120f] mb-5 border border-sage/25 flex items-center justify-center cursor-pointer`}
           onClick={() => onOpenModal(work)}
@@ -54,18 +54,18 @@ function CanvaPreviewCard({
                 Loading Real Artwork
               </p>
               <p className="text-[11px] font-mono text-ivory/40">
-                Rendering Canva Production...
+                Rendering Production Artwork...
               </p>
             </div>
           )}
 
-          {/* Genuine User-Uploaded Canva Artwork Preview */}
+          {/* Genuine Project Artwork Preview */}
           <img
             src={work.thumbnail}
             alt={`${work.name} preview`}
             loading="lazy"
             onLoad={() => setImageLoaded(true)}
-            className={`w-full h-full ${work.isIdentity ? 'object-contain p-3 bg-black' : 'object-cover'} transition-all duration-700 group-hover:scale-105 ${
+            className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${
               imageLoaded ? 'opacity-100 filter-none' : 'opacity-0 scale-98'
             }`}
           />
@@ -73,7 +73,7 @@ function CanvaPreviewCard({
           {/* Top Badges */}
           <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-pine/90 backdrop-blur-md border border-sage/35 text-[10px] font-mono text-sage uppercase tracking-wider shadow-md">
             <CheckCircle2 size={11} className="text-sage" />
-            <span>{work.isIdentity ? 'Brand Identity' : 'Canva Artwork'}</span>
+            <span>{work.isIdentity ? 'Brand Identity' : 'Design Campaign'}</span>
           </div>
 
           {work.pages && (
@@ -115,7 +115,7 @@ function CanvaPreviewCard({
               )}
             </div>
             <p className="text-[11px] font-mono text-ivory/70 text-center max-w-xs mt-1">
-              Click to inspect high-resolution artwork
+              Click to inspect high-resolution artwork &amp; assets
             </p>
           </motion.div>
         </div>
@@ -153,10 +153,10 @@ function CanvaPreviewCard({
           ) : (
             <button
               onClick={() => onOpenModal(work)}
-              className="inline-flex items-center gap-1 text-sage hover:underline font-semibold"
+              className="inline-flex items-center gap-1.5 text-sage hover:underline font-semibold"
             >
-              <span>VIEW ARTWORK</span>
-              <Eye size={11} />
+              <span>CASE STUDY &amp; ASSETS</span>
+              <Eye size={12} />
             </button>
           )}
         </div>
@@ -172,7 +172,7 @@ function CanvaPreviewCard({
             <span>EDIT IN CANVA</span>
           </a>
         ) : (
-          <span className="text-ivory/30 text-[10px]">VERIFIED ASSET</span>
+          <span className="text-ivory/30 text-[10px]">ORIGINAL BRAND WORK</span>
         )}
       </div>
     </motion.article>
@@ -181,6 +181,12 @@ function CanvaPreviewCard({
 
 export default function DesignSection() {
   const [activeModalWork, setActiveModalWork] = useState<DesignWork | null>(null)
+  const [selectedGalleryUrl, setSelectedGalleryUrl] = useState<string | null>(null)
+
+  const handleOpenModal = (work: DesignWork) => {
+    setActiveModalWork(work)
+    setSelectedGalleryUrl(work.thumbnail)
+  }
 
   // Keyboard shortcut: Escape closes modal
   useEffect(() => {
@@ -193,6 +199,8 @@ export default function DesignSection() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [activeModalWork])
 
+  const currentDisplayImage = selectedGalleryUrl || activeModalWork?.thumbnail
+
   return (
     <section id="design" className="py-24 px-6 relative matrix-dots">
       <div className="max-w-7xl mx-auto">
@@ -202,7 +210,7 @@ export default function DesignSection() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-sage/30 text-xs font-mono uppercase text-sage mb-4">
               <Palette size={12} />
-              <span>Design Archive · Genuine Canva Artwork</span>
+              <span>Design Archive · Brand Identities &amp; Creative Direction</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ivory tracking-tight mb-4">
@@ -211,7 +219,7 @@ export default function DesignSection() {
             </h2>
 
             <p className="text-ivory/60 text-base max-w-2xl font-sans leading-relaxed">
-              Real Canva campaign productions, brand identity systems, and event announcements. Actual artwork previews visible directly on cards with instant high-resolution inspection.
+              Creator brand identities, minimalist product packaging, and editorial design campaigns. Genuine artwork previews visible directly on cards with instant high-resolution inspection.
             </p>
           </div>
 
@@ -231,7 +239,7 @@ export default function DesignSection() {
               key={work.id}
               work={work}
               index={idx}
-              onOpenModal={(w) => setActiveModalWork(w)}
+              onOpenModal={handleOpenModal}
             />
           ))}
         </div>
@@ -276,18 +284,67 @@ export default function DesignSection() {
                 {activeModalWork.name}
               </h3>
 
+              {/* Brand Message callout if available */}
+              {activeModalWork.brandMessage && (
+                <div className="mb-4 p-3.5 rounded-xl bg-gradient-to-r from-pine via-[#15241d] to-pine border border-sage/35 flex items-center gap-2.5">
+                  <Sparkles size={16} className="text-sage shrink-0" />
+                  <span className="font-display text-sm sm:text-base text-champagne font-bold tracking-wide italic">
+                    "{activeModalWork.brandMessage}"
+                  </span>
+                </div>
+              )}
+
               <p className="text-ivory/70 text-sm sm:text-base leading-relaxed mb-6 font-sans">
                 {activeModalWork.fullDesc}
               </p>
 
               {/* Large High-Resolution Visual Preview in Modal */}
-              <div className="relative w-full rounded-2xl overflow-hidden bg-[#09110e] border border-sage/25 mb-6 flex items-center justify-center p-2 sm:p-4 min-h-[320px] max-h-[560px]">
-                <img
-                  src={activeModalWork.thumbnail}
-                  alt={`${activeModalWork.name} high-resolution`}
-                  className="max-h-[520px] w-auto max-w-full object-contain rounded-xl shadow-2xl"
-                />
+              <div className="relative w-full rounded-2xl overflow-hidden bg-[#09110e] border border-sage/25 mb-4 flex items-center justify-center p-2 sm:p-4 min-h-[320px] max-h-[560px]">
+                {currentDisplayImage && (
+                  <img
+                    src={currentDisplayImage}
+                    alt={`${activeModalWork.name} high-resolution visual`}
+                    className="max-h-[520px] w-auto max-w-full object-contain rounded-xl shadow-2xl transition-all duration-300"
+                  />
+                )}
               </div>
+
+              {/* Interactive Asset Switcher Gallery for Multi-Asset Brands */}
+              {activeModalWork.gallery && activeModalWork.gallery.length > 1 && (
+                <div className="mb-6">
+                  <p className="text-xs font-mono uppercase tracking-wider text-sage mb-2.5 flex items-center gap-1.5">
+                    <Layers size={13} />
+                    <span>Project Visual System &amp; Brand Assets:</span>
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                    {activeModalWork.gallery.map((asset, gIdx) => {
+                      const isSelected = currentDisplayImage === asset.url
+                      return (
+                        <button
+                          key={gIdx}
+                          onClick={() => setSelectedGalleryUrl(asset.url)}
+                          className={`p-2.5 rounded-xl border text-left transition-all duration-200 flex items-center gap-3 ${
+                            isSelected
+                              ? 'bg-sage/20 border-sage text-ivory ring-1 ring-sage/50 shadow-md'
+                              : 'glass-panel border-sage/20 text-ivory/60 hover:text-ivory hover:border-sage/40'
+                          }`}
+                        >
+                          <div className="w-10 h-10 rounded-lg overflow-hidden bg-black/60 shrink-0 border border-sage/25 flex items-center justify-center">
+                            <img
+                              src={asset.url}
+                              alt={asset.label}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <span className="text-[11px] font-mono line-clamp-2 leading-tight">
+                            {asset.label}
+                          </span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* Specs & Role */}
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-2xl bg-pine/60 border border-sage/20 mb-6 text-xs font-mono">
@@ -296,7 +353,7 @@ export default function DesignSection() {
                   <span className="text-sage font-semibold">{activeModalWork.role}</span>
                 </div>
                 <div>
-                  <span className="text-ivory/40 uppercase block mb-1">Organization / Context</span>
+                  <span className="text-ivory/40 uppercase block mb-1">Project Context</span>
                   <span className="text-ivory">{activeModalWork.clientOrOrg}</span>
                 </div>
                 <div>
@@ -336,7 +393,8 @@ export default function DesignSection() {
                 )}
 
                 {!activeModalWork.viewUrl && (
-                  <span className="text-xs font-mono text-sage/80 italic">
+                  <span className="text-xs font-mono text-sage/80 italic flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sage animate-ping" />
                     Original brand identity designed by Soumya K.
                   </span>
                 )}
