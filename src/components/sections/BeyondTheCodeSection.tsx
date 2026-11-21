@@ -80,10 +80,10 @@ export default function BeyondTheCodeSection() {
               </p>
               
               <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-ivory/60">
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/35 text-sage font-semibold">#BrandBuilding</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-sage">#CreativeWriting</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/80">#ContentCreation</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/70">#MusicInspiration</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/35 text-sage font-semibold hover:border-sage transition-colors">#BrandBuilding</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-sage hover:border-sage transition-colors">#CreativeWriting</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/80 hover:border-sage transition-colors">#ContentCreation</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/70 hover:border-sage transition-colors">#MusicInspiration</span>
               </div>
             </div>
 
