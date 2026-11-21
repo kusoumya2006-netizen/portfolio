@@ -125,6 +125,21 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e1613;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(154, 165, 139, 0.25);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(154, 165, 139, 0.45);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
