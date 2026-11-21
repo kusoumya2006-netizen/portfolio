@@ -395,8 +395,8 @@ export const JOURNEY = [
     title: "Design Team Member",
     org: "CyberNova",
     type: "club",
-    details: "Active design contributor for CyberNova. Created the 5-page Mission: Find Nemo — The Tech Quest campaign creatives for the Department of IT.",
-    tags: ["Design", "CyberNova", "Event Campaign", "Tech Quest"]
+    details: "Active design contributor for CyberNova student society at SVCE. Designed the 5-page 'Mission: Find Nemo — The Tech Quest' campaign creatives in collaboration with the Department of Information Technology (AIT) and commemorative editorial series including Gandhi Jayanti.",
+    tags: ["Design", "CyberNova", "Event Campaign", "Tech Quest", "SVCE IT"]
   },
   {
     id: "sih-2026",
