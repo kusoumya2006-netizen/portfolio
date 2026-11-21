@@ -72,9 +72,16 @@ export default function App() {
         />
       )}
 
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sage focus:text-charcoal focus:font-mono focus:text-xs focus:font-bold focus:rounded-lg focus:shadow-xl focus:ring-2 focus:ring-champagne"
+      >
+        Skip to main content
+      </a>
+
       <ScrollToAnchor />
       <Navigation onReplayIntro={handleReplayEntrance} />
-      <div className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow focus:outline-none">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/works/:id" element={<ProjectDetailPage />} />
@@ -86,7 +93,7 @@ export default function App() {
           <Route path="/beyond-the-code" element={<HomePage />} />
           <Route path="/contact" element={<HomePage />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </div>
   )
