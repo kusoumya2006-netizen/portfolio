@@ -254,15 +254,15 @@ export const DESIGN_WORKS: DesignWork[] = [
     id: "qcic-core-team",
     modNumber: "MOD-01",
     number: "01",
-    name: "QCIC Core Team 2026–27 Announcement Series",
+    name: "QCIC Core Team 2026–27 Announcement Series (Design Draft)",
     role: "Design Lead",
     clientOrOrg: "Quantum Computing and Intelligence Club · SVCE",
-    shortDesc: "Official Core Team 2K26–2K27 leadership announcement campaign with deep-pine editorial typography.",
-    fullDesc: "A nine-page official core team leadership announcement campaign designed for the Quantum Computing and Intelligence Club (QCIC) at SVCE. Spanning four specialized club divisions: Computing Team, Machine Learning Team, Marketing & Design Team, and Security & Encoding Team. Structured with high-contrast condensed headline typography, subtle orbital hairline geometry, and the club ethos: 'The Next State of Thinking — Ideas, Algorithms, Real Impact'.",
+    shortDesc: "Leadership announcement design concept and internal campaign draft with deep-pine editorial typography.",
+    fullDesc: "A nine-page leadership announcement design concept prepared for the Quantum Computing and Intelligence Club (QCIC) at SVCE. Created as an internal campaign concept covering four proposed club divisions: Computing Team, Machine Learning Team, Marketing & Design Team, and Security & Encoding Team. Structured with high-contrast condensed headline typography, subtle orbital hairline geometry, and the club ethos: 'The Next State of Thinking — Ideas, Algorithms, Real Impact'.",
     category: "Editorial & Announcements",
-    categoryTags: ["Editorial Design", "Team Announcement", "Leadership", "9 Pages", "QCIC SVCE"],
+    categoryTags: ["Design Concept", "Team Announcement Draft", "Editorial Layout", "9 Pages", "QCIC SVCE"],
     year: "2026",
-    pages: "9 Pages Series",
+    pages: "9 Pages Draft Concept",
     tools: "Canva · Editorial Layout",
     thumbnail: "/assets/design/qcic-core-team.jpg",
     aspectRatio: "aspect-[4/5]",
@@ -385,7 +385,7 @@ export const JOURNEY = [
     title: "Design Lead",
     org: "Quantum Computing and Intelligence Club (QCIC)",
     type: "leadership",
-    details: "Lead design direction for QCIC. Created the official club logo and monolithic silver visual identity, 9-page core team leadership campaign, and the STTP on Quantum Machine Learning certificate series. Actively explore quantum algorithms, hybrid quantum-classical workflows, and QML research alongside computing club members.",
+    details: "Lead design direction for QCIC. Created the official club logo and monolithic silver visual identity, the core team leadership announcement concept materials, and the STTP on Quantum Machine Learning certificate series. Actively explore quantum algorithms, hybrid quantum-classical workflows, and QML research alongside computing club members.",
     tags: ["Design Lead", "Logo Design", "Brand Identity", "Quantum Computing", "SVCE Leadership"]
   },
   {
@@ -439,10 +439,10 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
     summary: "Exploring brand identity, positioning, visual language, creative direction, audience engagement, and marketing strategies.",
     details: "I love exploring how intentional brand identities and strategic visual systems give organizations a distinct soul. From defining core positioning and tone of voice to crafting cohesive color systems and typography, I approach branding as the ultimate fusion of psychology, visual art, and communication strategy.",
     bullets: [
-      "Defining core brand positioning, values, and distinct tone of voice that set initiatives apart",
+      "Defining core brand positioning, values, and distinct tone of voice that set projects apart",
       "Designing unified visual languages across logos, typography, color palettes, and digital touchpoints",
-      "Directing creative concepts that turn abstract ideas into recognizable, memorable identities (e.g. QCIC)",
-      "Studying audience engagement patterns and creative content marketing strategies for tech student initiatives"
+      "Directing creative concepts that turn abstract ideas into recognizable, memorable visual identities",
+      "Studying audience engagement patterns and creative communication strategies"
     ],
     iconName: "Palette",
     featured: true

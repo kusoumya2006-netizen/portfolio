@@ -40,7 +40,7 @@ A bespoke, editorial portfolio web application for **Soumya Kumar** (B.E. Comput
 
 ### 5. Design Archive & Brand Identity
 - **Quantum Computing and Intelligence Club (QCIC)**: Official monochromatic silver brand identity, quantum waveform geometry, and lattice structure.
-- **QCIC Core Team 2026–27**: 9-page leadership announcement editorial series with vintage grain and space-age minimalism.
+- **QCIC Core Team 2026–27**: 9-page leadership announcement design draft and editorial concept with vintage grain and space-age minimalism.
 - **STTP Certificate Series**: Academic accreditation credential design for Faculty and Student programs.
 - **Mission: Find Nemo**: CyberNova & AIT tech quest campaign visual identity and underwater cyber-aesthetic.
 - **Gandhi Jayanti**: Commemorative editorial collage blending historical khadi textures and modern typography.

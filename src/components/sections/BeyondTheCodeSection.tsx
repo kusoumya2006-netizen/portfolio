@@ -135,7 +135,7 @@ export default function BeyondTheCodeSection() {
                     Soumya K.
                   </p>
                   <p className="text-[11px] font-mono text-sage font-medium">
-                    Creative Technologist &amp; Brand Builder
+                    Creative Technologist
                   </p>
                   <p className="text-[10px] font-mono text-ivory/45 mt-1">
                     "A little code. A little chaos."
@@ -210,7 +210,7 @@ export default function BeyondTheCodeSection() {
                     href="#design"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sage text-pine font-mono text-xs font-semibold uppercase tracking-wider hover:bg-sage/90 transition-all shadow-md group/btn"
                   >
-                    <span>View QCIC Brand Identity in Design Archive</span>
+                    <span>Explore Design &amp; Visual Works</span>
                     <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
@@ -242,10 +242,10 @@ export default function BeyondTheCodeSection() {
             <div className="pt-6 border-t border-sage/15 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-ivory/45 relative z-10">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-sage" />
-                Active Creative Pursuit &amp; Club Leadership (QCIC Design Lead)
+                Active Personal Creative Pursuit
               </span>
               <span className="text-sage/75">
-                Visual Architecture · Tone · Digital Engagement
+                Visual Architecture · Tone · Creative Communication
               </span>
             </div>
           </motion.article>
