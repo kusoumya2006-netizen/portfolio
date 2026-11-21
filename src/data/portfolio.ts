@@ -1,4 +1,22 @@
-export const PROFILE = {
+import {
+  Profile,
+  Project,
+  DesignWork,
+  JourneyItem,
+  CreativeFrequency,
+  Certification
+} from '../types/portfolio'
+
+export type {
+  Profile,
+  Project,
+  DesignWork,
+  JourneyItem,
+  CreativeFrequency,
+  Certification
+}
+
+export const PROFILE: Profile = {
   name: "Soumya K.",
   fullName: "Soumya K.",
   tagline: "Creative Technologist · Computer Science",
@@ -37,23 +55,6 @@ export const PROFILE = {
   interests: ["Quantum Computing", "AI & Machine Learning", "UI/UX Design", "Systems Engineering", "Visual Identity"],
   humanInterests: ["Brand Building & Marketing", "Creative Writing", "Content Creation", "Music"]
 };
-
-export interface Project {
-  id: string;
-  number: string;
-  name: string;
-  shortDesc: string;
-  fullDesc: string;
-  problem: string;
-  contribution: string[];
-  tech: string[];
-  category: string[];
-  github?: string | null;
-  demo?: string | null;
-  metrics?: string;
-  featured: boolean;
-  accentColor: string;
-}
 
 export const PROJECTS: Project[] = [
   {
@@ -246,28 +247,6 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export interface DesignWork {
-  id: string;
-  modNumber: string;
-  number: string;
-  name: string;
-  role: string;
-  clientOrOrg: string;
-  shortDesc: string;
-  fullDesc: string;
-  category: string;
-  categoryTags: string[];
-  year: string;
-  pages?: string;
-  tools: string;
-  thumbnail: string;
-  aspectRatio: string;
-  viewUrl: string | null;
-  editUrl: string | null;
-  isIdentity: boolean;
-  accentColor: string;
-}
-
 // NOTE: "Finding Club Logo" is completely removed per user instruction.
 // All 5 designs use the real user-uploaded Canva artwork images directly.
 export const DESIGN_WORKS: DesignWork[] = [
@@ -449,18 +428,6 @@ export const JOURNEY = [
     tags: ["Volunteer", "FORESE", "Campus"]
   }
 ];
-
-export interface CreativeFrequency {
-  id: string;
-  dimensionNumber: string;
-  title: string;
-  tag: string;
-  summary: string;
-  details: string;
-  bullets: string[];
-  iconName: string;
-  featured?: boolean;
-}
 
 export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
   {
