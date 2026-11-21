@@ -309,7 +309,7 @@ export default function BeyondTheCodeSection() {
                           <Music2 size={13} />
                           <span>Creative Soundscapes</span>
                         </span>
-                        <span className="text-ivory/40 text-[10px]">Studio Sanctuary</span>
+                        <span className="text-ivory/40 text-[10px] uppercase tracking-wider font-mono">Acoustic Cadence</span>
                       </div>
                       
                       {/* Decorative waveform graphic */}
