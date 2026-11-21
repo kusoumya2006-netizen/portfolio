@@ -34,10 +34,22 @@ function ScrollToAnchor() {
 }
 
 export default function App() {
-  const [showEntrance, setShowEntrance] = useState(true)
+  const [showEntrance, setShowEntrance] = useState(() => {
+    // Check if user already experienced intro in this session
+    try {
+      return sessionStorage.getItem('sk_portfolio_intro_seen') !== 'true'
+    } catch {
+      return true
+    }
+  })
   const [isExitingEntrance, setIsExitingEntrance] = useState(false)
 
   const handleEnter = () => {
+    try {
+      sessionStorage.setItem('sk_portfolio_intro_seen', 'true')
+    } catch {
+      // ignore
+    }
     setIsExitingEntrance(true)
     setTimeout(() => {
       setShowEntrance(false)
