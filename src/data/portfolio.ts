@@ -35,7 +35,7 @@ export const PROFILE = {
     resumeAlt: "/assets/Soumya_K_Resume_Updated_CONVERA.pdf"
   },
   interests: ["Quantum Computing", "AI & Machine Learning", "UI/UX Design", "Systems Engineering", "Visual Identity"],
-  humanInterests: ["Writing & Content", "Brand Creation", "Assisting & Volunteering", "Music", "Visual Exploration", "Emerging Tech"]
+  humanInterests: ["Brand Building & Marketing", "Creative Writing", "Content Creation", "Music"]
 };
 
 export interface Project {
@@ -452,11 +452,12 @@ export const JOURNEY = [
 
 export interface CreativeFrequency {
   id: string;
+  dimensionNumber: string;
   title: string;
   tag: string;
   summary: string;
   details: string;
-  bullets?: string[];
+  bullets: string[];
   iconName: string;
   featured?: boolean;
 }
@@ -464,105 +465,61 @@ export interface CreativeFrequency {
 export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
   {
     id: "brand-building",
-    title: "Brand Building & Identity Creation",
-    tag: "SIGNATURE DISCIPLINE",
-    summary: "Developing complete brand identities, visual systems, memorable marks, and creative directions.",
-    details: "Brand building is a visible, central pillar of my creative identity. I explore how distinct visual concepts and cohesive systems turn ideas into recognizable movements.",
+    dimensionNumber: "01",
+    title: "Brand Building & Marketing",
+    tag: "SIGNATURE CREATIVE FOCUS",
+    summary: "Exploring brand identity, positioning, visual language, creative direction, audience engagement, and marketing strategies.",
+    details: "I love exploring how intentional brand identities and strategic visual systems give organizations a distinct soul. From defining core positioning and tone of voice to crafting cohesive color systems and typography, I approach branding as the ultimate fusion of psychology, visual art, and communication strategy.",
     bullets: [
-      "Developing comprehensive brand identities and conceptual visual frameworks",
-      "Creating standalone logos and exploring expansive visual directions",
-      "Building unified design languages (typography, palette, grid) for clubs and technical initiatives",
-      "Combining strategic storytelling, design craft, and identity into memorable digital experiences"
+      "Exploring core brand positioning, values, and distinct tone of voice",
+      "Designing unified visual languages across logos, typography, color palettes, and digital touchpoints",
+      "Shaping creative directions that turn abstract ideas into recognizable, memorable identities",
+      "Studying audience engagement patterns and creative content marketing strategies"
     ],
     iconName: "Palette",
     featured: true
   },
   {
-    id: "writing",
-    title: "Writing & Content Creation",
-    tag: "NARRATIVE & VOICE",
-    summary: "Expressing ideas, structuring thoughts, and shaping technical storytelling.",
-    details: "I enjoy writing, developing narratives, articulating perspectives, and crafting clear, engaging content that bridges complex ideas with accessible human language.",
+    id: "creative-writing",
+    dimensionNumber: "02",
+    title: "Creative Writing",
+    tag: "NARRATIVE & EXPRESSION",
+    summary: "Personal expression through writing, storytelling, ideas, and words.",
+    details: "Writing is my medium for clarifying thoughts, deconstructing complex ideas, and exploring personal perspectives. Whether drafting essays, reflective notes, or conceptual stories, I care deeply about phrasing, rhythm, and finding evocative words that make readers pause and think.",
     bullets: [
-      "Translating engineering concepts into compelling narratives",
-      "Drafting editorial content, article structures, and technical reflections",
-      "Framing ideas with distinct voice and clarity"
+      "Expressing personal perspectives, essays, and reflective thoughts on tech, culture, and life",
+      "Deconstructing complex topics into clear, humane, and engaging written narratives",
+      "Focusing on editorial cadence, voice, and the evocative craft of words"
     ],
     iconName: "PenTool"
   },
   {
-    id: "volunteering",
-    title: "Assistance & Volunteering",
-    tag: "COLLABORATION & PEOPLE",
-    summary: "Supporting initiatives, peer coordination, and hands-on community engagement.",
-    details: "I genuinely enjoy assisting with campus events, supporting people, contributing to teams behind the scenes, and being actively involved in collaborative experiences like Alumni Meets and FORESE.",
+    id: "content-creation",
+    dimensionNumber: "03",
+    title: "Content Creation",
+    tag: "DIGITAL STORYTELLING",
+    summary: "Developing content, creative concepts, digital storytelling, and engaging visual narratives.",
+    details: "I experiment with creative concepts, visual storytelling, and digital formats that bridge the gap between imagination and audience connection. It is about understanding what catches attention authentically, structuring compelling narratives, and designing engaging editorial presentations.",
     bullets: [
-      "Active campus event coordination and guest facilitation",
-      "Supporting peers, team logistics, and student orientation",
-      "Creating positive, inclusive collaborative spaces"
+      "Brainstorming and developing creative concepts and digital content formats",
+      "Structuring visual narratives with strong editorial hierarchy, pacing, and visual interest",
+      "Exploring digital storytelling that informs, entertains, and connects with audiences"
     ],
-    iconName: "Users"
+    iconName: "Video"
   },
   {
     id: "music",
-    title: "Music & Acoustic Atmosphere",
-    tag: "CURATED LISTENING",
-    summary: "Soundscapes that drive focus, inspire creative rhythm, and elevate the digital studio.",
-    details: "Music is an essential companion to my creative workflow — setting cadence for late-night builds, sparking visual ideas, and providing acoustic focus across coding and design sessions.",
+    dimensionNumber: "04",
+    title: "Music",
+    tag: "PERSONAL PASSION & INSPIRATION",
+    summary: "A personal hobby and continuous source of creative inspiration, mood, and rhythm.",
+    details: "Music is an indispensable creative sanctuary and personal companion. Rather than background noise, listening to music across diverse genres sets the rhythm for late-night thinking, sparks unexpected design ideas, and provides acoustic focus for deep work.",
     bullets: [
-      "Acoustic focus soundscapes and electronic cadence",
-      "Rhythm-driven creative sprints and architecture sessions",
-      "Curated listening corners reflecting studio mood"
+      "A personal hobby and lifelong passion exploring diverse musical styles, instruments, and moods",
+      "An endless reservoir of creative energy that sparks visual ideas and sets the rhythm for thinking",
+      "Acoustic atmosphere that fuels intense creative sprints and thoughtful contemplation"
     ],
     iconName: "Headphones"
-  },
-  {
-    id: "visual",
-    title: "Design & Visual Exploration",
-    tag: "EXPERIMENTAL INTERFACES",
-    summary: "Testing typography scale, negative space, and editorial layout boundaries.",
-    details: "I treat interface design as an expressive craft — experimenting with unconventional grids, tactile micro-interactions, paper textures, and aesthetic compositions beyond routine templates.",
-    bullets: [
-      "Breaking cookie-cutter grid conventions with asymmetric editorial balance",
-      "Experimenting with tactile typography, noise textures, and fine hairline coordinates",
-      "Exploring interaction affordances that spark visitor curiosity"
-    ],
-    iconName: "Sparkles"
-  },
-  {
-    id: "tech-experiments",
-    title: "Technology & Experimentation",
-    tag: "EXPLORING WHAT'S NEXT",
-    summary: "Curiosity-driven investigations into quantum computing, vision algorithms, and AI.",
-    details: "I am constantly drawn to emerging domains — investigating how quantum computation redefines complexity, exploring speech synthesis detectors, and pushing past standard web paradigms.",
-    bullets: [
-      "Investigating quantum circuits and Quantum Machine Learning algorithms",
-      "Testing heuristic audio models and multimodal risk scoring",
-      "Prototyping responsive web frontends with fluid state transitions"
-    ],
-    iconName: "Cpu"
-  }
-];
-
-// Curated tracks / soundscape corner that Soumya can customize
-export const LISTENING_CORNER = [
-  {
-    title: "Focus State // Atmospheric Waves",
-    artist: "Curated Ambient Studio",
-    tag: "Coding Cadence",
-    bpm: "72 BPM · Low Fidelity",
-  },
-  {
-    title: "Late Night Syntax // Deep Waves",
-    artist: "Acoustic Explorations",
-    tag: "Deep Systems",
-    bpm: "84 BPM · Electronic Texture",
-  },
-  {
-    title: "Creative Reverie // Analog Warmth",
-    artist: "Editorial Visual Sessions",
-    tag: "Visual Design",
-    bpm: "68 BPM · Warm Melody",
   }
 ];
 
