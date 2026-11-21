@@ -134,15 +134,22 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ivory/40">
-          <p>© 2026 Soumya K. · B.E. Computer Science and Engineering (SVCE)</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p>© 2026 Soumya K. · B.E. Computer Science and Engineering (SVCE)</p>
+            <span className="hidden sm:inline text-sage/30">|</span>
+            <div className="inline-flex items-center gap-1.5 text-sage/70">
+              <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse"></span>
+              <span>Chennai, IN (IST) · Active</span>
+            </div>
+          </div>
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 hover:text-sage transition-colors p-2 rounded-lg glass-panel border border-sage/20"
-            aria-label="Scroll to top"
+            className="inline-flex items-center gap-2 hover:text-sage transition-all duration-300 px-3.5 py-1.5 rounded-full glass-panel border border-sage/20 hover:border-sage/40 hover:shadow-lg hover:shadow-sage/10 text-ivory/70 group"
+            aria-label="Scroll back to top of page"
           >
             <span>Back to top</span>
-            <ArrowUp size={12} />
+            <ArrowUp size={12} className="group-hover:-translate-y-0.5 transition-transform" />
           </button>
         </div>
 
