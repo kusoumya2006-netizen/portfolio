@@ -271,6 +271,7 @@ export const DESIGN_WORKS: DesignWork[] = [
     isIdentity: true,
     accentColor: "#FF007A",
     brandMessage: "BREAK THE FORMAT. NOT YOUR VOICE.",
+    behanceUrl: "https://www.behance.net/gallery/258825847/OFFSCRIPT-Profile-Identity-Social-Header",
     gallery: [
       { label: "Main Brand Poster & Character", url: "/images/designs/offscript/poster.jpg" },
       { label: "Condensed Wordmark", url: "/images/designs/offscript/wordmark.png" },
@@ -298,6 +299,7 @@ export const DESIGN_WORKS: DesignWork[] = [
     isIdentity: true,
     accentColor: "#9AA58B",
     brandMessage: "SKIN, WITHOUT THE NOISE. — LESS ROUTINE. MORE INTENTION.",
+    behanceUrl: "https://www.behance.net/gallery/258824845/VELORA-Experimental-Skincare-Brand-Identity",
     gallery: [
       { label: "FORM / 001 Daily Serum Campaign Poster", url: "/images/designs/velora/poster.jpg" },
       { label: "VÉLORA Minimalist Monogram & Wordmark", url: "/images/designs/velora/logo.png" }

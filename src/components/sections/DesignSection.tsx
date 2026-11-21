@@ -101,7 +101,18 @@ function CanvaPreviewCard({
                 <span>Quick View</span>
               </button>
 
-              {work.viewUrl && (
+              {work.behanceUrl ? (
+                <a
+                  href={work.behanceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-pine/90 border border-sage/50 text-champagne text-xs font-semibold hover:border-sage hover:text-ivory transition-all shadow-lg"
+                >
+                  <span>Behance</span>
+                  <ExternalLink size={11} />
+                </a>
+              ) : work.viewUrl ? (
                 <a
                   href={work.viewUrl}
                   target="_blank"
@@ -112,7 +123,7 @@ function CanvaPreviewCard({
                   <span>Canva</span>
                   <ExternalLink size={11} />
                 </a>
-              )}
+              ) : null}
             </div>
             <p className="text-[11px] font-mono text-ivory/70 text-center max-w-xs mt-1">
               Click to inspect high-resolution artwork &amp; assets
@@ -139,8 +150,18 @@ function CanvaPreviewCard({
 
       {/* Card Action Links Footer */}
       <div className="pt-4 border-t border-sage/15 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-        <div className="flex items-center gap-2">
-          {work.viewUrl ? (
+        <div className="flex items-center gap-3">
+          {work.behanceUrl ? (
+            <a
+              href={work.behanceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sage hover:text-champagne font-semibold transition-colors group/link"
+            >
+              <span>VIEW ON BEHANCE</span>
+              <span className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">↗</span>
+            </a>
+          ) : work.viewUrl ? (
             <a
               href={work.viewUrl}
               target="_blank"
@@ -161,19 +182,29 @@ function CanvaPreviewCard({
           )}
         </div>
 
-        {work.editUrl ? (
-          <a
-            href={work.editUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-ivory/60 hover:text-ivory transition-colors"
-          >
-            <Edit3 size={11} className="text-sage" />
-            <span>EDIT IN CANVA</span>
-          </a>
-        ) : (
-          <span className="text-ivory/30 text-[10px]">ORIGINAL BRAND WORK</span>
-        )}
+        <div className="flex items-center gap-2">
+          {work.behanceUrl && (
+            <button
+              onClick={() => onOpenModal(work)}
+              className="text-ivory/60 hover:text-sage text-[11px] font-mono transition-colors"
+            >
+              Quick View
+            </button>
+          )}
+          {work.editUrl ? (
+            <a
+              href={work.editUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-ivory/60 hover:text-ivory transition-colors"
+            >
+              <Edit3 size={11} className="text-sage" />
+              <span>EDIT IN CANVA</span>
+            </a>
+          ) : !work.behanceUrl ? (
+            <span className="text-ivory/30 text-[10px]">ORIGINAL BRAND WORK</span>
+          ) : null}
+        </div>
       </div>
     </motion.article>
   )
@@ -368,6 +399,18 @@ export default function DesignSection() {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-sage/20">
+                {activeModalWork.behanceUrl && (
+                  <a
+                    href={activeModalWork.behanceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sage text-pine text-xs font-semibold uppercase tracking-wider hover:bg-sage/90 transition-all shadow-md group/bbtn"
+                  >
+                    <span>View Project on Behance</span>
+                    <span className="group-hover/bbtn:translate-x-0.5 group-hover/bbtn:-translate-y-0.5 transition-transform font-bold">↗</span>
+                  </a>
+                )}
+
                 {activeModalWork.viewUrl && (
                   <a
                     href={activeModalWork.viewUrl}
@@ -392,7 +435,7 @@ export default function DesignSection() {
                   </a>
                 )}
 
-                {!activeModalWork.viewUrl && (
+                {!activeModalWork.viewUrl && !activeModalWork.behanceUrl && (
                   <span className="text-xs font-mono text-sage/80 italic flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-sage animate-ping" />
                     Original brand identity designed by Soumya K.

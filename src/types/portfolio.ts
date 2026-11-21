@@ -77,6 +77,7 @@ export interface DesignWork {
   accentColor: string;
   gallery?: { label: string; url: string }[];
   brandMessage?: string;
+  behanceUrl?: string | null;
 }
 
 export interface JourneyItem {
