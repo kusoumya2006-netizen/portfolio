@@ -18,7 +18,11 @@ export default function SKMonogramLogo({
   const dimension = typeof size === 'number' ? `${size}px` : size
 
   return (
-    <div className={`inline-flex items-center gap-3 ${className}`}>
+    <div
+      role="img"
+      aria-label="SK Monogram — Soumya Kumar Personal Brand Identity"
+      className={`inline-flex items-center gap-3 ${className}`}
+    >
       <div
         className="relative flex items-center justify-center shrink-0 group cursor-pointer"
         style={{ width: dimension, height: dimension }}
