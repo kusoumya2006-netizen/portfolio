@@ -149,15 +149,15 @@ export const PROJECTS: Project[] = [
     number: "05",
     name: "NetWatch",
     shortDesc: "Network Monitoring Application & Cloud Metrics Dashboard",
-    fullDesc: "A network monitoring application featuring custom API endpoints, reactive web frontend, MongoDB Atlas persistence and automated deployment workflows.",
-    problem: "Distributed systems and local services require continuous health monitoring and uptime logging without heavy enterprise monitoring overhead.",
+    fullDesc: "A network monitoring application featuring custom API health check endpoints, reactive web frontend, MongoDB Atlas persistence and automated telemetry collection workflows.",
+    problem: "Distributed systems and local services require continuous health monitoring, latency tracking, and uptime logging without heavy enterprise monitoring software overhead.",
     contribution: [
-      "Developed backend monitoring API and endpoint telemetry collectors",
-      "Connected real-time state synchronization to MongoDB Atlas",
-      "Built clean dashboard visualizing ping, status codes and response latencies",
-      "Configured automated deployment workflows"
+      "Developed backend monitoring API and endpoint telemetry collectors in Node.js",
+      "Connected real-time state synchronization to MongoDB Atlas for timeseries latency storage",
+      "Built clean dashboard visualizing ping latency, HTTP status codes, and server uptime ratios",
+      "Configured automated deployment workflows and health notification alerts"
     ],
-    tech: ["API Development", "Web Frontend", "MongoDB Atlas", "Node.js"],
+    tech: ["Node.js", "Express", "MongoDB Atlas", "React", "REST APIs", "Tailwind CSS"],
     category: ["All", "Full Stack", "Systems"],
     github: "https://github.com/kusoumya2006-netizen/netwatch_new",
     demo: null,
