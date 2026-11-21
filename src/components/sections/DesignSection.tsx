@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Edit3, X, Eye, Palette, Sparkles, CheckCircle2, Layers, ZoomIn } from 'lucide-react'
 import { DESIGN_WORKS, DesignWork } from '../../data/portfolio'
@@ -182,6 +182,17 @@ function CanvaPreviewCard({
 export default function DesignSection() {
   const [activeModalWork, setActiveModalWork] = useState<DesignWork | null>(null)
 
+  // Keyboard shortcut: Escape closes modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && activeModalWork) {
+        setActiveModalWork(null)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [activeModalWork])
+
   return (
     <section id="design" className="py-24 px-6 relative matrix-dots">
       <div className="max-w-7xl mx-auto">
@@ -230,11 +241,18 @@ export default function DesignSection() {
       {/* Expanded Design Detail / Lightbox Modal */}
       <AnimatePresence>
         {activeModalWork && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${activeModalWork.name} preview modal`}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md"
+            onClick={() => setActiveModalWork(null)}
+          >
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
+              onClick={(e) => e.stopPropagation()}
               className="glass-card border border-sage/40 rounded-3xl p-6 sm:p-8 max-w-4xl w-full max-h-[92vh] overflow-y-auto relative shadow-2xl"
             >
               {/* Close Button */}
