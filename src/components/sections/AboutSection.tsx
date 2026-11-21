@@ -86,8 +86,20 @@ export default function AboutSection() {
 
                 {/* Vertical Bracket Annotations on Left */}
                 <div className="absolute left-3 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 font-mono text-[8px] sm:text-[9px] tracking-[0.2em] text-ivory/40 uppercase z-10 border-l border-sage/30 pl-2">
-                  {['BUILD', 'DESIGN', 'WRITE', 'CREATE', 'EXPLORE'].map((w) => (
-                    <span key={w} className="hover:text-sage transition-colors">{w}</span>
+                  {[
+                    { word: 'BUILD', hint: 'Systems & Backend' },
+                    { word: 'DESIGN', hint: 'UI/UX & Brand' },
+                    { word: 'WRITE', hint: 'Essays & Prose' },
+                    { word: 'CREATE', hint: 'Content & Media' },
+                    { word: 'EXPLORE', hint: 'Quantum & AI' }
+                  ].map(({ word, hint }) => (
+                    <span
+                      key={word}
+                      title={hint}
+                      className="hover:text-sage hover:translate-x-0.5 transition-all cursor-default"
+                    >
+                      {word}
+                    </span>
                   ))}
                 </div>
 
