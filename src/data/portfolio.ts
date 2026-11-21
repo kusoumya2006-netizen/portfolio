@@ -128,15 +128,15 @@ export const PROJECTS: Project[] = [
     number: "04",
     name: "VYRA",
     shortDesc: "Explainable Scam Detection Platform with Responsive React Interface",
-    fullDesc: "A workflow for analyzing suspicious messages, URLs, emails and phone numbers using NLP, machine learning and risk analysis, paired with an interpretable risk signal dashboard.",
+    fullDesc: "A comprehensive workflow for analyzing suspicious messages, URLs, emails and phone numbers using NLP, machine learning and risk analysis, paired with an interpretable risk signal dashboard that highlights deceptive heuristics.",
     problem: "Users receive deceptive phishing messages and fraud vectors across multiple channels with no intuitive, instant way to assess threat levels or understand why something is malicious.",
     contribution: [
-      "Trained classification models on phishing datasets using Scikit-learn",
-      "Implemented multi-vector ingestion (URLs, SMS, emails, phone numbers)",
-      "Designed responsive React interface highlighting flagged heuristics",
-      "Integrated FastAPI backend with asynchronous heuristic pipelines"
+      "Trained classification models on phishing and social engineering datasets using Scikit-learn and TF-IDF vectors",
+      "Implemented multi-vector ingestion pipelines for URLs, SMS, emails, and telephony indicators",
+      "Designed responsive React interface highlighting flagged heuristics with explainable severity tags",
+      "Integrated FastAPI backend with asynchronous heuristic evaluation and caching"
     ],
-    tech: ["Python", "FastAPI", "Scikit-learn", "NLP", "React", "TypeScript", "Vite"],
+    tech: ["Python", "FastAPI", "Scikit-learn", "NLP", "React", "TypeScript", "Vite", "Tailwind CSS"],
     category: ["All", "AI & ML", "Full Stack"],
     github: "https://github.com/kusoumya2006-netizen/VYRA",
     demo: null,
