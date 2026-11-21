@@ -385,8 +385,8 @@ export const JOURNEY = [
     title: "Design Lead",
     org: "Quantum Computing and Intelligence Club (QCIC)",
     type: "leadership",
-    details: "Lead design direction for QCIC. Created the official club logo, overall visual identity, and core team announcement creatives. Active interest in quantum computing, quantum machine learning, and technological experimentation.",
-    tags: ["Design Lead", "Logo Design", "Brand Identity", "Quantum Computing"]
+    details: "Lead design direction for QCIC. Created the official club logo and monolithic silver visual identity, 9-page core team leadership campaign, and the STTP on Quantum Machine Learning certificate series. Actively explore quantum algorithms, hybrid quantum-classical workflows, and QML research alongside computing club members.",
+    tags: ["Design Lead", "Logo Design", "Brand Identity", "Quantum Computing", "SVCE Leadership"]
   },
   {
     id: "cybernova",
