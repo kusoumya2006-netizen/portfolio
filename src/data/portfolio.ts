@@ -439,10 +439,10 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
     summary: "Exploring brand identity, positioning, visual language, creative direction, audience engagement, and marketing strategies.",
     details: "I love exploring how intentional brand identities and strategic visual systems give organizations a distinct soul. From defining core positioning and tone of voice to crafting cohesive color systems and typography, I approach branding as the ultimate fusion of psychology, visual art, and communication strategy.",
     bullets: [
-      "Exploring core brand positioning, values, and distinct tone of voice",
+      "Defining core brand positioning, values, and distinct tone of voice that set initiatives apart",
       "Designing unified visual languages across logos, typography, color palettes, and digital touchpoints",
-      "Shaping creative directions that turn abstract ideas into recognizable, memorable identities",
-      "Studying audience engagement patterns and creative content marketing strategies"
+      "Directing creative concepts that turn abstract ideas into recognizable, memorable identities (e.g. QCIC)",
+      "Studying audience engagement patterns and creative content marketing strategies for tech student initiatives"
     ],
     iconName: "Palette",
     featured: true
