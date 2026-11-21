@@ -469,9 +469,9 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
     summary: "Developing content, creative concepts, digital storytelling, and engaging visual narratives.",
     details: "I experiment with creative concepts, visual storytelling, and digital formats that bridge the gap between imagination and audience connection. It is about understanding what catches attention authentically, structuring compelling narratives, and designing engaging editorial presentations.",
     bullets: [
-      "Brainstorming and developing creative concepts and digital content formats",
-      "Structuring visual narratives with strong editorial hierarchy, pacing, and visual interest",
-      "Exploring digital storytelling that informs, entertains, and connects with audiences"
+      "Brainstorming and developing creative concepts and digital content formats from seed ideas to final layouts",
+      "Structuring visual narratives with intentional editorial hierarchy, typographic rhythm, and visual interest",
+      "Exploring digital storytelling methods that authentically inform, captivate, and connect with technical communities"
     ],
     iconName: "Video"
   },
