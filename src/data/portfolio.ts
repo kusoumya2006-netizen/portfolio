@@ -455,9 +455,9 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
     summary: "Personal expression through writing, storytelling, ideas, and words.",
     details: "Writing is my medium for clarifying thoughts, deconstructing complex ideas, and exploring personal perspectives. Whether drafting essays, reflective notes, or conceptual stories, I care deeply about phrasing, rhythm, and finding evocative words that make readers pause and think.",
     bullets: [
-      "Expressing personal perspectives, essays, and reflective thoughts on tech, culture, and life",
-      "Deconstructing complex topics into clear, humane, and engaging written narratives",
-      "Focusing on editorial cadence, voice, and the evocative craft of words"
+      "Expressing personal perspectives, essays, and reflective thoughts on technology, culture, and human systems",
+      "Deconstructing complex algorithmic topics into clear, humane, and resonant written narratives",
+      "Focusing on editorial cadence, voice, and finding the exact right word to make ideas memorable"
     ],
     iconName: "PenTool"
   },
