@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nemoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101C18"/>
+      <stop offset="50%" stop-color="#182E26"/>
+      <stop offset="100%" stop-color="#0E1915"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="750" fill="url(#nemoGrad)"/>
+
+  <!-- Grid Lines -->
+  <g opacity="0.15">
+    <line x1="100" y1="0" x2="100" y2="750" stroke="#9AA58B" stroke-width="0.8"/>
+    <line x1="200" y1="0" x2="200" y2="750" stroke="#9AA58B" stroke-width="0.8"/>
+    <line x1="300" y1="0" x2="300" y2="750" stroke="#9AA58B" stroke-width="0.8"/>
+    <line x1="400" y1="0" x2="400" y2="750" stroke="#9AA58B" stroke-width="0.8"/>
+    <line x1="500" y1="0" x2="500" y2="750" stroke="#9AA58B" stroke-width="0.8"/>
+  </g>
+
+  <!-- Frame -->
+  <rect x="25" y="25" width="550" height="700" fill="none" stroke="#9AA58B" stroke-width="1" opacity="0.4" rx="4"/>
+
+  <!-- Top Badges -->
+  <text x="50" y="70" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B" letter-spacing="3">DEPT OF IT // AIT × CYBERNOVA</text>
+  <text x="550" y="70" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#D8D0BD" opacity="0.6">MOD-04 · 5 PAGES</text>
+
+  <!-- Date Badge -->
+  <rect x="50" y="100" width="170" height="28" rx="14" fill="#9AA58B" opacity="0.2"/>
+  <text x="65" y="118" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B" font-weight="bold">10–11 SEPTEMBER 2026</text>
+
+  <!-- Main Headline -->
+  <text x="50" y="190" font-family="Georgia, serif" font-size="44" fill="#D8D0BD" font-weight="bold">MISSION:</text>
+  <text x="50" y="240" font-family="Georgia, serif" font-size="48" fill="#9AA58B" font-style="italic">FIND NEMO</text>
+  <text x="50" y="275" font-family="'Courier New', monospace" font-size="15" fill="#D8D0BD" letter-spacing="4">THE TECH QUEST</text>
+
+  <!-- Divider -->
+  <line x1="50" y1="295" x2="550" y2="295" stroke="#9AA58B" stroke-width="1" opacity="0.4"/>
+
+  <!-- Quest Submarine / Sonar Radar Graphic -->
+  <g transform="translate(300, 420)">
+    <!-- Sonar Concentric Rings -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#9AA58B" stroke-width="0.8" opacity="0.3"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#9AA58B" stroke-width="0.8" opacity="0.4"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#D8D0BD" stroke-width="1" opacity="0.5"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#9AA58B" stroke-width="1.2"/>
+    
+    <!-- Crosshairs -->
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="#9AA58B" stroke-width="0.8" opacity="0.4"/>
+    <line x1="0" y1="-120" x2="0" y2="120" stroke="#9AA58B" stroke-width="0.8" opacity="0.4"/>
+    
+    <!-- Radar Sweep Angle -->
+    <path d="M 0 0 L 78 -78 A 110 110 0 0 1 110 0 Z" fill="#9AA58B" opacity="0.2"/>
+    
+    <!-- Quest Target Coordinate Blips -->
+    <circle cx="45" cy="-55" r="4" fill="#D8D0BD"/>
+    <circle cx="45" cy="-55" r="10" fill="none" stroke="#D8D0BD" stroke-width="1" opacity="0.6"/>
+    <text x="60" y="-50" font-family="'Courier New', monospace" font-size="10" fill="#D8D0BD">TARGET // LVL-3</text>
+
+    <circle cx="-60" cy="35" r="3.5" fill="#9AA58B"/>
+    <text x="-115" y="40" font-family="'Courier New', monospace" font-size="10" fill="#9AA58B">KEYPOINT 02</text>
+  </g>
+
+  <!-- Quest Features -->
+  <g transform="translate(50, 560)">
+    <rect x="0" y="0" width="150" height="50" rx="4" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="15" y="22" font-family="'Courier New', monospace" font-size="9" fill="#9AA58B">CHALLENGE</text>
+    <text x="15" y="38" font-family="Arial, sans-serif" font-size="12" fill="#D8D0BD" font-weight="bold">Multi-Level Logic</text>
+
+    <rect x="175" y="0" width="150" height="50" rx="4" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="190" y="22" font-family="'Courier New', monospace" font-size="9" fill="#9AA58B">MODE</text>
+    <text x="190" y="38" font-family="Arial, sans-serif" font-size="12" fill="#D8D0BD" font-weight="bold">Interactive Rounds</text>
+
+    <rect x="350" y="0" width="150" height="50" rx="4" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="365" y="22" font-family="'Courier New', monospace" font-size="9" fill="#9AA58B">AUDIENCE</text>
+    <text x="365" y="38" font-family="Arial, sans-serif" font-size="12" fill="#D8D0BD" font-weight="bold">Campus Tech Quest</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="50" y="695" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B">CAMPAIGN DESIGN: SOUMYA K.</text>
+  <text x="550" y="695" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#B5B5AD">CYBERNOVA DESIGN TEAM</text>
+</svg>

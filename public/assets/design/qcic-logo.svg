@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qcicLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121B17"/>
+      <stop offset="50%" stop-color="#182721"/>
+      <stop offset="100%" stop-color="#0E1613"/>
+    </linearGradient>
+    <radialGradient id="quantumGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#9AA58B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9AA58B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#qcicLogoGrad)"/>
+  <rect width="600" height="600" fill="url(#quantumGlow)"/>
+
+  <!-- Editorial Card Border -->
+  <rect x="25" y="25" width="550" height="550" fill="none" stroke="#9AA58B" stroke-width="1" opacity="0.35" rx="6"/>
+
+  <!-- Top Metadata -->
+  <text x="50" y="65" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B" letter-spacing="3">QUANTUM CLUB EMBLEM DESIGN</text>
+  <text x="550" y="65" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#D8D0BD" opacity="0.6">MOD-03 // BRANDING</text>
+
+  <!-- Superposition Construction Waveforms Background -->
+  <g transform="translate(300, 260)" opacity="0.35">
+    <ellipse cx="0" cy="0" rx="160" ry="60" fill="none" stroke="#9AA58B" stroke-width="0.8" transform="rotate(30)"/>
+    <ellipse cx="0" cy="0" rx="160" ry="60" fill="none" stroke="#9AA58B" stroke-width="0.8" transform="rotate(-30)"/>
+    <ellipse cx="0" cy="0" rx="160" ry="60" fill="none" stroke="#D8D0BD" stroke-width="0.8" transform="rotate(90)"/>
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#B5B5AD" stroke-width="0.5" stroke-dasharray="3 6"/>
+  </g>
+
+  <!-- QCIC Signature Quantum Qubit Logo -->
+  <g transform="translate(300, 260)">
+    <!-- Interlocking Quantum Rings -->
+    <ellipse cx="0" cy="0" rx="100" ry="38" fill="none" stroke="#D8D0BD" stroke-width="2.5" transform="rotate(45)"/>
+    <ellipse cx="0" cy="0" rx="100" ry="38" fill="none" stroke="#9AA58B" stroke-width="2.2" transform="rotate(-45)"/>
+    <ellipse cx="0" cy="0" rx="100" ry="38" fill="none" stroke="#B5B5AD" stroke-width="1.2" stroke-dasharray="4 6"/>
+
+    <!-- Central Microprocessor / Qubit Core -->
+    <rect x="-24" y="-24" width="48" height="48" rx="8" fill="#17231F" stroke="#9AA58B" stroke-width="2"/>
+    <circle cx="0" cy="0" r="10" fill="#D8D0BD"/>
+    <circle cx="0" cy="0" r="4" fill="#17231F"/>
+
+    <!-- Energy Flux Nodes -->
+    <circle cx="70" cy="70" r="5" fill="#9AA58B"/>
+    <circle cx="-70" cy="-70" r="5" fill="#9AA58B"/>
+    <circle cx="-70" cy="70" r="5" fill="#D8D0BD"/>
+    <circle cx="70" cy="-70" r="5" fill="#D8D0BD"/>
+
+    <!-- Quantum State Ket Vector Symbol -->
+    <text x="0" y="5" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#17231F" font-weight="bold">Ψ</text>
+  </g>
+
+  <!-- Typography -->
+  <text x="300" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#D8D0BD" font-weight="bold" letter-spacing="3">QCIC</text>
+  <text x="300" y="450" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#9AA58B" letter-spacing="3">QUANTUM COMPUTING &amp; INTELLIGENCE CLUB</text>
+  <text x="300" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#B5B5AD" opacity="0.8">SVCE // OFFICIAL BRAND IDENTITY SYSTEM</text>
+
+  <!-- Bottom Specs -->
+  <g transform="translate(50, 515)">
+    <line x1="0" y1="0" x2="500" y2="0" stroke="#9AA58B" stroke-width="0.8" opacity="0.3"/>
+    <text x="0" y="25" font-family="'Courier New', monospace" font-size="10" fill="#B5B5AD">CONCEPT: SUPERPOSITION &amp; ENTANGLEMENT</text>
+    <text x="500" y="25" text-anchor="end" font-family="'Courier New', monospace" font-size="10" fill="#9AA58B">DESIGN LEAD: SOUMYA K.</text>
+  </g>
+</svg>

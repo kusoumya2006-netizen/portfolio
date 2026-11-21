@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gjGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18231F"/>
+      <stop offset="50%" stop-color="#1C2B25"/>
+      <stop offset="100%" stop-color="#141E1A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="750" fill="url(#gjGrad)"/>
+
+  <!-- Editorial Fine Borders -->
+  <rect x="25" y="25" width="550" height="700" fill="none" stroke="#9AA58B" stroke-width="0.8" opacity="0.3" rx="4"/>
+  <rect x="35" y="35" width="530" height="680" fill="none" stroke="#B5B5AD" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Header -->
+  <text x="50" y="70" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B" letter-spacing="4">COMMEMORATIVE EDITORIAL DESIGN</text>
+  <text x="550" y="70" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#D8D0BD" opacity="0.6">MOD-06 · 3 PAGES</text>
+
+  <!-- Big Typography -->
+  <text x="50" y="150" font-family="Georgia, serif" font-size="46" fill="#D8D0BD" font-weight="bold">GANDHI</text>
+  <text x="50" y="200" font-family="Georgia, serif" font-size="46" fill="#9AA58B" font-style="italic">JAYANTI</text>
+  
+  <text x="50" y="235" font-family="'Courier New', monospace" font-size="12" fill="#B5B5AD" letter-spacing="3">COMMEMORATIVE SOCIAL SERIES</text>
+
+  <line x1="50" y1="255" x2="550" y2="255" stroke="#9AA58B" stroke-width="1" opacity="0.4"/>
+
+  <!-- Minimal Charkha / Spinning Wheel Motif Center -->
+  <g transform="translate(300, 390)">
+    <!-- Outer Spoke Rim -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#D8D0BD" stroke-width="1.8" opacity="0.8"/>
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#9AA58B" stroke-width="0.8" opacity="0.5"/>
+    <circle cx="0" cy="0" r="18" fill="#18231F" stroke="#9AA58B" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="6" fill="#D8D0BD"/>
+
+    <!-- 24 Wheel Spokes -->
+    <g stroke="#9AA58B" stroke-width="0.8" opacity="0.6">
+      <line x1="0" y1="-92" x2="0" y2="92"/>
+      <line x1="-92" y1="0" x2="92" y2="0"/>
+      <line x1="-65" y1="-65" x2="65" y2="65"/>
+      <line x1="-65" y1="65" x2="65" y2="-65"/>
+      <line x1="-35" y1="-85" x2="35" y2="85" opacity="0.4"/>
+      <line x1="-85" y1="-35" x2="85" y2="35" opacity="0.4"/>
+      <line x1="-85" y1="35" x2="85" y2="-35" opacity="0.4"/>
+      <line x1="-35" y1="85" x2="35" y2="-85" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Triad Pillars: Truth · Peace · Non-Violence -->
+  <g transform="translate(300, 550)">
+    <rect x="-240" y="0" width="150" height="45" rx="22" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="-165" y="27" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#D8D0BD" font-weight="bold" letter-spacing="2">TRUTH</text>
+
+    <rect x="-75" y="0" width="150" height="45" rx="22" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="0" y="27" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#9AA58B" font-weight="bold" letter-spacing="2">PEACE</text>
+
+    <rect x="90" y="0" width="150" height="45" rx="22" fill="#141E1A" stroke="#9AA58B" stroke-width="0.8"/>
+    <text x="165" y="27" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#D8D0BD" font-weight="bold" letter-spacing="2">NON-VIOLENCE</text>
+  </g>
+
+  <!-- Editorial Quotation -->
+  <text x="300" y="635" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#D8D0BD" font-style="italic" opacity="0.8">
+    "In a gentle way, you can shake the world."
+  </text>
+
+  <!-- Footer -->
+  <text x="50" y="695" font-family="'Courier New', monospace" font-size="11" fill="#9AA58B">DESIGNER: SOUMYA K.</text>
+  <text x="550" y="695" text-anchor="end" font-family="'Courier New', monospace" font-size="11" fill="#B5B5AD">3-PAGE CANVA SOCIAL RELEASE</text>
+</svg>
