@@ -231,8 +231,12 @@ export default function HeroSection() {
               {/* 1. Top Left: COMPUTER SCIENCE & ENGINEERING */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                animate={{ opacity: 1, x: 0, y: [0, -3, 0] }}
+                transition={{
+                  opacity: { duration: 0.6, delay: 0.3 },
+                  x: { duration: 0.6, delay: 0.3 },
+                  y: { duration: 4, repeat: Infinity, ease: 'easeInOut' }
+                }}
                 className="absolute -top-3 left-2 sm:-left-4 glass-card border border-sage/40 rounded-xl px-3 py-1.5 shadow-lg z-20 hover:scale-105 transition-transform"
               >
                 <div className="flex items-center gap-1.5 text-[10px] font-mono text-sage font-semibold uppercase tracking-wider">
@@ -244,8 +248,12 @@ export default function HeroSection() {
               {/* 2. Top Right: CREATIVE TECHNOLOGIST */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                animate={{ opacity: 1, x: 0, y: [0, 3, 0] }}
+                transition={{
+                  opacity: { duration: 0.6, delay: 0.4 },
+                  x: { duration: 0.6, delay: 0.4 },
+                  y: { duration: 4.5, repeat: Infinity, ease: 'easeInOut' }
+                }}
                 className="absolute top-2 -right-2 sm:-right-6 glass-card border border-sage/40 rounded-xl px-3 py-1.5 shadow-lg z-20 hover:scale-105 transition-transform"
               >
                 <p className="text-[10px] font-mono text-ivory/90 font-semibold uppercase tracking-widest flex items-center gap-1.5">
