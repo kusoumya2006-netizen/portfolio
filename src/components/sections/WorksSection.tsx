@@ -36,22 +36,29 @@ export default function WorksSection({ featured = false }: { featured?: boolean 
             </p>
           </div>
 
-          {/* Filters */}
+          {/* Filters with dynamic count indicators */}
           {!featured && (
             <div className="flex flex-wrap items-center gap-2">
               {FILTER_CATEGORIES.map(category => {
                 const isActive = activeFilter === category
+                const count = category === 'All'
+                  ? PROJECTS.length
+                  : PROJECTS.filter(p => p.category.includes(category)).length
+
                 return (
                   <button
                     key={category}
                     onClick={() => setActiveFilter(category)}
-                    className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 ${
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 flex items-center gap-1.5 ${
                       isActive
                         ? 'bg-sage text-pine font-bold shadow-md shadow-sage/10'
                         : 'glass-panel text-ivory/60 hover:text-ivory hover:border-sage/40'
                     }`}
                   >
-                    {category}
+                    <span>{category}</span>
+                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-pine/20 text-pine' : 'bg-pine text-sage'}`}>
+                      {count}
+                    </span>
                   </button>
                 )
               })}
