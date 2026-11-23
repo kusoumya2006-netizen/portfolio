@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight, ChevronDown, Sparkles } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import SKMonogramLogo from '../ui/SKMonogramLogo'
 
 interface GrandEntranceProps {
@@ -118,8 +118,8 @@ export default function GrandEntrance({ onEnter, isExiting }: GrandEntranceProps
 
                 {/* Primary Sinuous Quantum Waveform */}
                 <motion.path
-                  initial={{ opacity: 0, pathLength: 0 } as any}
-                  animate={{ opacity: 1, pathLength: 1 } as any}
+                  initial={{ opacity: 0, pathLength: 0 } as unknown as Record<string, number>}
+                  animate={{ opacity: 1, pathLength: 1 } as unknown as Record<string, number>}
                   transition={{ duration: 2.2, ease: 'easeInOut' }}
                   d="M -100 300 C 200 180, 400 420, 720 280 C 1040 140, 1200 380, 1540 260"
                   stroke="url(#waveGlow)"
@@ -127,16 +127,16 @@ export default function GrandEntrance({ onEnter, isExiting }: GrandEntranceProps
                   strokeDasharray="4 4"
                 />
                 <motion.path
-                  initial={{ opacity: 0, pathLength: 0 } as any}
-                  animate={{ opacity: 0.6, pathLength: 1 } as any}
+                  initial={{ opacity: 0, pathLength: 0 } as unknown as Record<string, number>}
+                  animate={{ opacity: 0.6, pathLength: 1 } as unknown as Record<string, number>}
                   transition={{ duration: 2.5, delay: 0.2, ease: 'easeInOut' }}
                   d="M -100 320 C 240 440, 480 180, 720 320 C 960 460, 1240 160, 1540 340"
                   stroke="url(#waveGlow)"
                   strokeWidth="1.5"
                 />
                 <motion.path
-                  initial={{ opacity: 0, pathLength: 0 } as any}
-                  animate={{ opacity: 0.4, pathLength: 1 } as any}
+                  initial={{ opacity: 0, pathLength: 0 } as unknown as Record<string, number>}
+                  animate={{ opacity: 0.4, pathLength: 1 } as unknown as Record<string, number>}
                   transition={{ duration: 2.8, delay: 0.4, ease: 'easeInOut' }}
                   d="M -100 280 C 300 220, 520 360, 720 300 C 920 240, 1180 340, 1540 280"
                   stroke="url(#waveGlow)"
@@ -315,7 +315,7 @@ export default function GrandEntrance({ onEnter, isExiting }: GrandEntranceProps
                 transition={{ duration: 0.8 }}
                 className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col gap-3 font-mono text-[10px] tracking-[0.25em] text-ivory/40 uppercase border-l border-sage/25 pl-4"
               >
-                {['BUILD', 'DESIGN', 'WRITE', 'CREATE', 'EXPLORE'].map((word, i) => (
+                {['BUILD', 'DESIGN', 'WRITE', 'CREATE', 'EXPLORE'].map(word => (
                   <span
                     key={word}
                     className="hover:text-sage hover:translate-x-1 transition-all duration-200 cursor-default"
@@ -332,7 +332,7 @@ export default function GrandEntrance({ onEnter, isExiting }: GrandEntranceProps
                 transition={{ duration: 0.8 }}
                 className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col gap-3 font-mono text-[10px] tracking-[0.25em] text-ivory/40 uppercase text-right border-r border-sage/25 pr-4"
               >
-                {['AI / ML', 'SYSTEMS', 'BRAND IDENTITY', 'UI / UX', 'QUANTUM'].map((word, i) => (
+                {['AI / ML', 'SYSTEMS', 'BRAND IDENTITY', 'UI / UX', 'QUANTUM'].map(word => (
                   <span
                     key={word}
                     className="hover:text-sage hover:-translate-x-1 transition-all duration-200 cursor-default"

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Compass, Sparkles, Code2, Cpu } from 'lucide-react'
+import { Compass } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 import SKMonogramLogo from '../ui/SKMonogramLogo'
 import CSEProcessorInsignia from '../ui/CSEProcessorInsignia'

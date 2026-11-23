@@ -4,6 +4,7 @@ import Navigation from './components/layout/Navigation'
 import Footer from './components/layout/Footer'
 import HomePage from './pages/HomePage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import NotFoundPage from './pages/NotFoundPage'
 import GrandEntrance from './components/layout/GrandEntrance'
 
 function ScrollToAnchor() {
@@ -87,11 +88,14 @@ export default function App() {
           <Route path="/works/:id" element={<ProjectDetailPage />} />
           {/* Section paths gracefully map to the continuous scroll experience */}
           <Route path="/works" element={<HomePage />} />
+          <Route path="/atlas" element={<HomePage />} />
           <Route path="/design" element={<HomePage />} />
           <Route path="/journey" element={<HomePage />} />
           <Route path="/about" element={<HomePage />} />
           <Route path="/beyond-the-code" element={<HomePage />} />
           <Route path="/contact" element={<HomePage />} />
+          {/* Wildcard 404 Route */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />

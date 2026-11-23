@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Mail, Phone, Linkedin, Github, FileText, Send, ArrowUpRight, CheckCircle2, AlertCircle, Copy, Check } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 

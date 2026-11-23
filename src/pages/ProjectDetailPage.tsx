@@ -9,14 +9,12 @@ import {
   ExternalLink,
   Layers,
   CheckCircle2,
-  Cpu,
   ShieldAlert,
   Sliders,
   Award,
   Lightbulb,
   FileCode,
   Palette,
-  Eye,
   Activity,
   Workflow
 } from 'lucide-react'

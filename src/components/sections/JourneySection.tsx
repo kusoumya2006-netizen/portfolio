@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Briefcase, Award, Users, Palette, Code2, Terminal } from 'lucide-react'
-import { JOURNEY, JourneyItem } from '../../data/portfolio'
+import { motion } from 'framer-motion'
+import { Briefcase } from 'lucide-react'
+import { JOURNEY } from '../../data/portfolio'
 
 const JOURNEY_FILTERS = [
   { label: 'All', value: 'all' },

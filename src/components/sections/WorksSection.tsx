@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, ExternalLink, ArrowUpRight, CheckCircle2, Terminal, Code2, Layers, X, ShieldAlert, Cpu } from 'lucide-react'
+import { Github, ExternalLink, ArrowUpRight, CheckCircle2, Code2, X } from 'lucide-react'
 import { PROJECTS, Project } from '../../data/portfolio'
 
 const FILTER_CATEGORIES = ['All', 'AI & ML', 'Full Stack', 'Systems', 'UI/UX', 'IoT']

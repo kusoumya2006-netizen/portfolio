@@ -10,7 +10,6 @@ interface CSEProcessorInsigniaProps {
 export default function CSEProcessorInsignia({
   size = 'md',
   className = '',
-  showLabels = true,
 }: CSEProcessorInsigniaProps) {
   const [hovered, setHovered] = useState(false)
 
@@ -19,8 +18,6 @@ export default function CSEProcessorInsignia({
     md: 'w-28 h-28',
     lg: 'w-44 h-44',
   }
-
-  const pinCount = size === 'lg' ? 12 : size === 'md' ? 8 : 5
 
   return (
     <motion.div

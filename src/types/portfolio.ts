@@ -74,6 +74,10 @@ export interface DesignCaseStudyData {
   canvaUrl?: string;
 }
 
+export type ProjectStatus = 'COMPLETED' | 'ONGOING' | 'PROTOTYPE' | 'EXPERIMENTAL' | 'ACADEMIC';
+export type ProjectDiscipline = 'Engineering' | 'Creative' | 'Cross-Disciplinary';
+export type ProjectClassification = 'Flagship' | 'Secondary' | 'Academic' | 'Exploratory' | 'Brand Identity';
+
 export interface Project {
   id: string;
   number: string;
@@ -84,6 +88,11 @@ export interface Project {
   contribution: string[];
   tech: string[];
   category: string[];
+  status?: ProjectStatus;
+  discipline?: ProjectDiscipline;
+  classification?: ProjectClassification;
+  originality?: string;
+  teamOrSolo?: 'Individual' | 'Team';
   github?: string | null;
   demo?: string | null;
   metrics?: string;

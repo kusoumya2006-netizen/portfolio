@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { ArrowUpRight, Github, Linkedin, FileText, Sparkles, Terminal, Code2, Cpu } from 'lucide-react'
+import { ArrowUpRight, Github, Linkedin, FileText, Sparkles, Code2 } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 import SKMonogramLogo from '../ui/SKMonogramLogo'
 import CSEProcessorInsignia from '../ui/CSEProcessorInsignia'
@@ -104,7 +103,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 mb-10"
+              className="flex flex-wrap items-center gap-4 mb-6"
             >
               <a
                 href="#works"
@@ -130,6 +129,44 @@ export default function HeroSection() {
                 <FileText size={15} className="text-sage" />
                 <span>Resume</span>
               </a>
+            </motion.div>
+
+            {/* Dual Discovery Pathways: Path A (Engineering) & Path B (Creative) */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="p-3.5 rounded-2xl glass-card border border-sage/25 max-w-xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#0a1410]/80"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-sage animate-ping" />
+                <span className="text-[10px] font-mono uppercase tracking-widest text-sage font-bold">
+                  DISCOVERY PATHWAYS:
+                </span>
+              </div>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <a
+                  href="#works"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-pine border border-sage/35 text-ivory text-xs font-mono hover:border-sage hover:text-sage transition-all"
+                >
+                  <Code2 size={13} className="text-sage" />
+                  <span>Path A: Engineering</span>
+                </a>
+                <a
+                  href="#design"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-pine border border-sage/35 text-champagne text-xs font-mono hover:border-sage hover:text-ivory transition-all"
+                >
+                  <Sparkles size={13} className="text-champagne" />
+                  <span>Path B: Creative</span>
+                </a>
+                <a
+                  href="#atlas"
+                  className="inline-flex items-center justify-center px-2.5 py-1.5 rounded-xl glass-panel text-[11px] font-mono text-ivory/60 hover:text-ivory hover:border-sage/40 transition-all"
+                  title="Full Interactive Project Atlas"
+                >
+                  Atlas
+                </a>
+              </div>
             </motion.div>
 
             {/* Social Links */}

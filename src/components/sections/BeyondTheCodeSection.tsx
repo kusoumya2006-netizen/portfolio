@@ -10,7 +10,6 @@ import {
   ArrowUpRight,
   Smile,
   CheckCircle2,
-  Compass,
   Layers,
   BookOpen,
   Music2,

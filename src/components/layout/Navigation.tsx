@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, FileText, Send, Radio, Sparkles } from 'lucide-react'
+import { Menu, X, FileText, Send, Sparkles } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 import SKMonogramLogo from '../ui/SKMonogramLogo'
-import CSEProcessorInsignia from '../ui/CSEProcessorInsignia'
 
 const NAV_SECTIONS = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#works' },
+  { label: 'Atlas', href: '#atlas' },
   { label: 'Design', href: '#design' },
   { label: 'Experience', href: '#journey' },
   { label: 'Beyond Code', href: '#beyond-the-code' },
@@ -30,7 +30,7 @@ export default function Navigation({ onReplayIntro }: { onReplayIntro?: () => vo
       }
 
       // ScrollSpy section detector
-      const sectionIds = ['hero', 'about', 'works', 'design', 'journey', 'beyond-the-code', 'skills', 'contact']
+      const sectionIds = ['hero', 'about', 'works', 'atlas', 'design', 'journey', 'beyond-the-code', 'skills', 'contact']
       const scrollPosition = window.scrollY + 250
 
       for (const id of sectionIds) {

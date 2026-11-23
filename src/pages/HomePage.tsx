@@ -3,6 +3,7 @@ import HeroSection from '../components/sections/HeroSection'
 import AboutSection from '../components/sections/AboutSection'
 import EngineeringBackgroundSection from '../components/sections/EngineeringBackgroundSection'
 import WorksSection from '../components/sections/WorksSection'
+import ProjectAtlas from '../components/sections/ProjectAtlas'
 import DesignSection from '../components/sections/DesignSection'
 import JourneySection from '../components/sections/JourneySection'
 import BeyondTheCodeSection from '../components/sections/BeyondTheCodeSection'
@@ -12,7 +13,7 @@ import ContactSection from '../components/sections/ContactSection'
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {/* 1. HERO — Portrait, identity, floating annotations, CSE processor insignia */}
+      {/* 1. HERO — Portrait, identity, dual pathway orientation, SK monogram */}
       <div id="hero">
         <HeroSection />
       </div>
@@ -23,32 +24,37 @@ export default function HomePage() {
         <EngineeringBackgroundSection />
       </div>
 
-      {/* 3. ENGINEERING PROJECTS — Real technical projects & case studies */}
+      {/* 3. SELECTED ENGINEERING PROJECTS — Flagship landmark systems & case studies */}
       <div id="works">
-        <WorksSection featured={false} />
+        <WorksSection featured={true} />
       </div>
 
-      {/* 4. DESIGN ARCHIVE — Real Canva artwork previews visible immediately */}
+      {/* 4. INTERACTIVE PROJECT ATLAS — Search, filter, and inspect all verified projects */}
+      <div id="atlas">
+        <ProjectAtlas />
+      </div>
+
+      {/* 5. DESIGN ARCHIVE — Visual-first creative exhibition with authentic assets */}
       <div id="design">
         <DesignSection />
       </div>
 
-      {/* 5. EXPERIENCE & JOURNEY — Internships, QCIC, CyberNova, SIH, volunteering */}
+      {/* 6. EXPERIENCE & LEADERSHIP — Chronological editorial timeline */}
       <div id="journey">
         <JourneySection />
       </div>
 
-      {/* 6. BEYOND THE CODE / OTHER FREQUENCIES — Writing, branding, volunteering, music */}
+      {/* 7. BEYOND THE CODE / CREATIVE PRACTICE — 4 frequencies + Bitmoji */}
       <div id="beyond-the-code">
         <BeyondTheCodeSection />
       </div>
 
-      {/* 7. SKILLS & CERTIFICATIONS — Constellation, Quantum inquiry, credentials */}
+      {/* 8. SKILLS & CREDENTIALS — Technical constellation & verified certifications */}
       <div id="skills">
         <SkillsSection />
       </div>
 
-      {/* 8. CONTACT — Direct email, LinkedIn, GitHub, resume download, form */}
+      {/* 9. CONTACT — Direct communication, resume download, verified channels */}
       <div id="contact">
         <ContactSection />
       </div>
