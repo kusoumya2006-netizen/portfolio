@@ -3,17 +3,15 @@ import { motion } from 'framer-motion'
 import {
   PenTool,
   Palette,
-  Headphones,
-  Video,
   Sparkles,
-  Radio,
+  Layers,
   ArrowUpRight,
   Smile,
   CheckCircle2,
-  Layers,
-  BookOpen,
-  Music2,
-  Quote
+  Workflow,
+  Cpu,
+  SlidersHorizontal,
+  FileCode
 } from 'lucide-react'
 import { CREATIVE_FREQUENCIES } from '../../data/portfolio'
 
@@ -23,14 +21,12 @@ export default function BeyondTheCodeSection() {
   // Map icon names to components
   const iconMap: Record<string, React.ElementType> = {
     Palette: Palette,
-    PenTool: PenTool,
-    Video: Video,
-    Headphones: Headphones,
-    BookOpen: BookOpen,
     Sparkles: Sparkles,
+    Layers: Layers,
+    PenTool: PenTool,
   }
 
-  // Find the featured Brand Building & Marketing dimension and the three complementary dimensions
+  // Find the featured Brand Building & Identity dimension and the secondary dimensions
   const brandDimension = CREATIVE_FREQUENCIES.find((f) => f.id === 'brand-building')
   const secondaryDimensions = CREATIVE_FREQUENCIES.filter((f) => f.id !== 'brand-building')
 
@@ -45,27 +41,27 @@ export default function BeyondTheCodeSection() {
         {/* Section Header */}
         <div className="mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-sage/35 text-xs font-mono uppercase text-sage mb-4">
-            <Radio size={13} className="animate-pulse" />
-            <span>Beyond the Code · Creative Dimensions</span>
+            <Workflow size={13} className="animate-pulse" />
+            <span>Creative Practice · Interdisciplinary Disciplines</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl text-ivory tracking-tight mb-4">
-            Other <span className="text-sage italic">Frequencies.</span>
+            Creative <span className="text-sage italic">Practice.</span>
           </h2>
           <p className="text-ivory/60 text-base sm:text-lg max-w-2xl font-sans leading-relaxed mb-8">
-            Personal pursuits, creative disciplines, and expressive interests that shape my perspective when I step away from the compiler.
+            Where engineering logic and aesthetic intuition converge—focusing on brand identity, creative technology prototyping, UI/UX systems architecture, and technical storytelling.
           </p>
 
-          {/* "BEYOND THE BOX" Hero Composition: Core Manifesto + Soumya's Custom Bitmoji Portrait */}
+          {/* Core Manifesto + Soumya's Custom Bitmoji Portrait Showcase */}
           <div className="grid lg:grid-cols-12 gap-8 items-center p-6 sm:p-10 rounded-3xl glass-card border border-sage/30 bg-gradient-to-br from-pine/95 via-[#14231d] to-[#0c1511] shadow-2xl relative overflow-hidden">
             {/* Ambient background orbital glow */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-sage/15 rounded-full blur-[100px] pointer-events-none" />
 
-            {/* Left Column (7 cols): Manifesto & Personality narrative */}
+            {/* Left Column (7 cols): Manifesto & Positioning */}
             <div className="lg:col-span-7 sm:pr-4">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-sage/15 border border-sage/30 text-[11px] font-mono text-sage uppercase tracking-wider mb-4 font-semibold">
                 <Sparkles size={12} />
-                <span>BEYOND THE BOX · NOT ONE BOX</span>
+                <span>INTERDISCIPLINARY DISCOVERY · NOT ONE BOX</span>
               </div>
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory font-bold leading-tight mb-4">
                 "Not one box. <br className="hidden sm:inline" />
@@ -75,18 +71,18 @@ export default function BeyondTheCodeSection() {
                 A little code. A little chaos. A lot of curiosity. Engineering meets imagination.
               </p>
               <p className="text-ivory/60 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Engineering builds rigorous logic; brand building, writing, content creation, and music give systems emotional resonance and human meaning. Here are the four creative frequencies I explore with infinite curiosity.
+                Engineering builds rigorous logic; brand identity, interface architecture, interaction prototyping, and technical writing give systems human clarity and emotional resonance. Here are the four creative practice disciplines I explore at the frontier of technology and design.
               </p>
               
               <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-ivory/60">
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/35 text-sage font-semibold hover:border-sage transition-colors">#BrandBuilding</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-sage hover:border-sage transition-colors">#CreativeWriting</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/80 hover:border-sage transition-colors">#ContentCreation</span>
-                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/70 hover:border-sage transition-colors">#MusicInspiration</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/35 text-sage font-semibold hover:border-sage transition-colors">#BrandIdentity</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-sage hover:border-sage transition-colors">#CreativeTechnology</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/80 hover:border-sage transition-colors">#UIUXArchitecture</span>
+                <span className="px-3 py-1 rounded-full bg-pine border border-sage/25 text-ivory/70 hover:border-sage transition-colors">#TechnicalWriting</span>
               </div>
             </div>
 
-            {/* Right Column (5 cols): Soumya's Bitmoji Character Showcase */}
+            {/* Right Column (5 cols): Soumya's Character Avatar Showcase */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
               <motion.div
                 animate={{ y: [0, -6, 0] }}
@@ -108,94 +104,62 @@ export default function BeyondTheCodeSection() {
                   {!bitmojiError ? (
                     <img
                       src="/images/bitmoji.png"
-                      alt="Soumya's Custom Bitmoji Portrait"
+                      alt="Soumya Kumar Custom Character Illustration"
                       onError={() => setBitmojiError(true)}
-                      className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                   ) : (
-                    /* Elegant Clearly Marked Fallback when file is temporarily missing */
-                    <div className="w-full h-full rounded-xl border border-dashed border-sage/50 bg-pine/40 flex flex-col items-center justify-center p-3 text-center">
-                      <div className="w-12 h-12 rounded-2xl bg-sage/20 border border-sage/30 flex items-center justify-center text-sage mb-2 shadow-sm">
-                        <Smile size={24} />
+                    <div className="w-full h-full flex flex-col items-center justify-center text-center p-3">
+                      <div className="w-14 h-14 rounded-full bg-sage/20 border border-sage/40 flex items-center justify-center text-sage mb-2">
+                        <Smile size={28} />
                       </div>
-                      <span className="text-[10px] font-mono font-bold text-sage uppercase tracking-wider block mb-1">
-                        Soumya's Bitmoji
-                      </span>
-                      <span className="text-[9px] font-mono text-ivory/50 leading-tight block">
-                        Bitmoji Portrait Preview
-                      </span>
+                      <p className="text-xs font-mono text-sage uppercase font-bold tracking-wider">Soumya K.</p>
+                      <p className="text-[10px] font-mono text-ivory/50 mt-0.5">Character Avatar</p>
                     </div>
                   )}
                 </motion.div>
 
-                {/* Identity Speech Bubble / Personal Tag */}
-                <div className="mt-1 pt-3 border-t border-sage/20 w-full">
-                  <p className="font-display text-base text-ivory font-bold">
-                    Soumya K.
-                  </p>
-                  <p className="text-[11px] font-mono text-sage font-medium">
-                    Creative Technologist
-                  </p>
-                  <p className="text-[10px] font-mono text-ivory/45 mt-1">
-                    "A little code. A little chaos."
-                  </p>
-                </div>
-
-                {/* Floating sticker annotations */}
-                <div className="absolute -bottom-3 -right-2 px-2.5 py-0.5 rounded-full bg-pine/90 border border-sage/40 text-[9px] font-mono text-sage shadow-md">
-                  #NeverInOneBox
+                <div className="text-center mt-2">
+                  <p className="text-xs font-mono uppercase tracking-widest text-ivory font-bold">SOUMYA KUMAR</p>
+                  <p className="text-[10px] font-mono text-sage tracking-wider mt-0.5">Creative Technologist · CSE 2028</p>
                 </div>
               </motion.div>
             </div>
+
           </div>
         </div>
 
-        {/* 1. BRAND BUILDING & MARKETING — FEATURED DOMINANT VISUAL PRESENCE */}
+        {/* 1. FEATURED SIGNATURE DISCIPLINE: BRAND BUILDING & IDENTITY SYSTEMS */}
         {brandDimension && (
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-10 rounded-3xl p-8 sm:p-10 lg:p-12 glass-card border border-sage/40 bg-gradient-to-br from-[#0c1813] via-[#102019] to-[#07100c] shadow-2xl relative overflow-hidden group"
+            className="glass-card rounded-3xl p-8 sm:p-12 border-2 border-sage/45 mb-12 bg-gradient-to-br from-[#12231b] via-[#0d1a14] to-[#08120e] shadow-2xl relative overflow-hidden group"
           >
-            {/* Metallic subtle ambient light cone */}
-            <div className="absolute -top-24 right-1/4 w-96 h-96 bg-sage/15 rounded-full blur-[110px] pointer-events-none" />
-            <div className="absolute -bottom-20 left-10 w-80 h-80 bg-pine/80 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-sage/10 rounded-full blur-[120px] pointer-events-none" />
 
-            {/* Top Coordinate Header */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-sage/20 relative z-10">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-sage text-pine flex items-center justify-center shadow-lg">
-                  <Palette size={24} />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono text-sage uppercase tracking-[0.2em] font-bold block">
-                    DIMENSION 01 // SIGNATURE CREATIVE FOCUS
-                  </span>
-                  <span className="text-xs font-mono text-ivory/50">
-                    Identity Systems · Positioning · Visual Direction
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="px-3 py-1 rounded-full bg-sage/15 border border-sage/35 text-sage font-mono text-[11px] font-semibold">
-                  BRAND STRATEGY &amp; CRAFT
-                </span>
-              </div>
-            </div>
-
-            {/* Main Editorial Content: 2 Columns */}
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 relative z-10 mb-8 items-start">
+            <div className="grid lg:grid-cols-12 gap-8 items-start relative z-10 mb-8">
               
-              {/* Left Column (7 cols): Narrative & Statement */}
+              {/* Left Column (7 cols): Editorial Narrative */}
               <div className="lg:col-span-7">
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory font-bold leading-tight mb-5 group-hover:text-sage transition-colors">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className="text-xs font-mono text-sage font-bold tracking-wider">
+                    DISCIPLINE {brandDimension.dimensionNumber}
+                  </span>
+                  <span className="text-ivory/30">/</span>
+                  <span className="text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full bg-sage/20 text-sage border border-sage/40 font-semibold">
+                    {brandDimension.tag}
+                  </span>
+                </div>
+
+                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory font-bold mb-4 leading-tight group-hover:text-champagne transition-colors">
                   {brandDimension.title}
                 </h3>
-                
-                <p className="text-ivory/85 text-base sm:text-lg font-sans leading-relaxed mb-4 font-medium">
+
+                <p className="text-ivory/85 text-base sm:text-lg font-sans font-medium mb-4 leading-relaxed">
                   {brandDimension.summary}
                 </p>
 
@@ -209,7 +173,7 @@ export default function BeyondTheCodeSection() {
                     href="#design"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sage text-pine font-mono text-xs font-semibold uppercase tracking-wider hover:bg-sage/90 transition-all shadow-md group/btn"
                   >
-                    <span>Explore Design &amp; Visual Works</span>
+                    <span>Explore Design &amp; Brand Archive</span>
                     <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
@@ -218,7 +182,7 @@ export default function BeyondTheCodeSection() {
               {/* Right Column (5 cols): Key Creative Pillars */}
               <div className="lg:col-span-5 space-y-3.5">
                 <p className="text-xs font-mono uppercase tracking-widest text-ivory/45 font-semibold mb-2">
-                  Creative Pillars &amp; Explorations
+                  Core Architectural Capabilities
                 </p>
                 {brandDimension.bullets.map((bullet, bIdx) => (
                   <div
@@ -241,22 +205,22 @@ export default function BeyondTheCodeSection() {
             <div className="pt-6 border-t border-sage/15 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-ivory/45 relative z-10">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-sage" />
-                Active Personal Creative Pursuit
+                Active Studio Creative Practice
               </span>
               <span className="text-sage/75">
-                Visual Architecture · Tone · Creative Communication
+                Visual Architecture · Tone · Identity Systems
               </span>
             </div>
           </motion.article>
         )}
 
-        {/* 2. THE THREE COMPLEMENTARY CREATIVE DIMENSIONS: WRITING, CONTENT, MUSIC */}
+        {/* 2. THE THREE COMPLEMENTARY CREATIVE DISCIPLINES */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {secondaryDimensions.map((dim, idx) => {
             const IconComponent = iconMap[dim.iconName] || Sparkles
-            const isMusic = dim.id === 'music'
-            const isWriting = dim.id === 'creative-writing'
-            const isContent = dim.id === 'content-creation'
+            const isCreativeTech = dim.id === 'creative-technology'
+            const isUIUX = dim.id === 'ui-ux-architecture'
+            const isWriting = dim.id === 'technical-storytelling'
 
             return (
               <motion.article
@@ -299,31 +263,27 @@ export default function BeyondTheCodeSection() {
                     {dim.details}
                   </p>
 
-                  {/* Distinctive Visual Graphic Accent for each dimension */}
-                  {isMusic && (
-                    /* Subtle Static Harmonic Soundwave Silhouette (Pure Graphic — No Player / Controls) */
-                    <div className="p-4 rounded-2xl bg-pine/40 border border-sage/20 mb-6 relative overflow-hidden">
-                      <div className="flex items-center justify-between text-[11px] font-mono text-sage mb-2.5">
-                        <span className="flex items-center gap-1.5 font-semibold">
-                          <Music2 size={13} />
-                          <span>Creative Soundscapes</span>
-                        </span>
-                        <span className="text-ivory/40 text-[10px] uppercase tracking-wider font-mono">Acoustic Cadence</span>
+                  {/* Distinctive Visual Architecture Graphic Accent */}
+                  {isCreativeTech && (
+                    <div className="p-4 rounded-2xl bg-pine/40 border border-sage/20 mb-6 relative">
+                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-sage font-semibold mb-2">
+                        <Cpu size={13} />
+                        <span>Interactive Code &amp; Motion</span>
                       </div>
-                      
-                      {/* Decorative waveform graphic */}
-                      <div className="flex items-center gap-1.5 h-9 py-1 px-1 opacity-70">
-                        {[16, 28, 20, 36, 18, 30, 24, 38, 22, 32, 14, 26, 34, 18, 28, 22, 36, 16].map((h, i) => (
-                          <div
-                            key={i}
-                            style={{ height: `${h}px` }}
-                            className="w-1.5 rounded-full bg-sage/60 group-hover:bg-sage transition-all duration-300"
-                          />
-                        ))}
-                      </div>
+                      <p className="text-[12px] font-sans text-ivory/70 italic leading-relaxed">
+                        "Reactive SVG vectors and state machines bridge mathematics with sensory delight."
+                      </p>
+                    </div>
+                  )}
 
-                      <p className="text-[11px] font-sans text-ivory/50 mt-2 italic">
-                        "Melody and cadence provide rhythm for late-night problem solving."
+                  {isUIUX && (
+                    <div className="p-4 rounded-2xl bg-pine/40 border border-sage/20 mb-6">
+                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-sage font-semibold mb-2">
+                        <SlidersHorizontal size={13} />
+                        <span>Systematic Token Architecture</span>
+                      </div>
+                      <p className="text-[12px] font-sans text-ivory/70 italic leading-relaxed">
+                        "Consistent tokens across color, typography, and spacing turn chaos into calm."
                       </p>
                     </div>
                   )}
@@ -331,23 +291,11 @@ export default function BeyondTheCodeSection() {
                   {isWriting && (
                     <div className="p-4 rounded-2xl bg-pine/40 border border-sage/20 mb-6 relative">
                       <div className="flex items-center gap-1.5 text-[11px] font-mono text-sage font-semibold mb-2">
-                        <Quote size={13} />
-                        <span>Craft of the Written Word</span>
+                        <FileCode size={13} />
+                        <span>Systems Case Studies &amp; Specs</span>
                       </div>
                       <p className="text-[12px] font-sans text-ivory/70 italic leading-relaxed">
-                        "Precision in thought leads to clarity in language. Writing is thinking made visible."
-                      </p>
-                    </div>
-                  )}
-
-                  {isContent && (
-                    <div className="p-4 rounded-2xl bg-pine/40 border border-sage/20 mb-6">
-                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-sage font-semibold mb-2">
-                        <Layers size={13} />
-                        <span>Visual Narrative Flow</span>
-                      </div>
-                      <p className="text-[12px] font-sans text-ivory/70 italic leading-relaxed">
-                        "Bridging ideas and audiences through thoughtful composition and pacing."
+                        "Documenting architecture, trade-offs, and failure modes transforms code into durable engineering."
                       </p>
                     </div>
                   )}
@@ -365,8 +313,8 @@ export default function BeyondTheCodeSection() {
 
                 {/* Card Footer */}
                 <div className="pt-6 mt-6 border-t border-sage/15 flex items-center justify-between text-xs font-mono text-ivory/40">
-                  <span>DIMENSION {dim.dimensionNumber}</span>
-                  <span className="text-sage font-medium">CREATIVE PASSION</span>
+                  <span>DISCIPLINE {dim.dimensionNumber}</span>
+                  <span className="text-sage font-medium">STUDIO PRACTICE</span>
                 </div>
               </motion.article>
             )

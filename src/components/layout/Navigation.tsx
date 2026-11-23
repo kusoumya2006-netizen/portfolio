@@ -9,7 +9,7 @@ const NAV_SECTIONS = [
   { label: 'Atlas', href: '#atlas' },
   { label: 'Design', href: '#design' },
   { label: 'Experience', href: '#journey' },
-  { label: 'Beyond Code', href: '#beyond-the-code' },
+  { label: 'Creative Practice', href: '#beyond-the-code' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ]

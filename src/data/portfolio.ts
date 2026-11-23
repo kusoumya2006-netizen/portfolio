@@ -53,7 +53,7 @@ export const PROFILE: Profile = {
     resumeAlt: "/assets/Soumya_K_Resume_Updated_CONVERA.pdf"
   },
   interests: ["Creative Technology", "Full-Stack Engineering", "Explainable AI & ML", "Brand Identity & Systems", "Visual Architecture"],
-  humanInterests: ["Brand Building & Marketing", "Creative Writing", "Photography & Visual Storytelling", "Content Creation", "Music"]
+  humanInterests: ["Brand Building & Identity", "Creative Technology Prototyping", "UI/UX Architecture", "Technical Writing & Systems Communication"]
 };
 
 export const PROJECTS: Project[] = [
@@ -1069,74 +1069,60 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
   {
     id: "brand-building",
     dimensionNumber: "01",
-    title: "Brand Building & Identity",
+    title: "Brand Building & Identity Systems",
     tag: "SIGNATURE DISCIPLINE",
     summary: "Crafting intentional brand identities, positioning, visual languages, and coherent typography systems.",
-    details: "I view branding as the architectural soul of an organization. From defining core positioning to formulating typography hierarchies and color systems, I approach identity creation as a synthesis of psychology, visual precision, and strategic communication.",
+    details: "I view branding as the architectural soul of an initiative. From defining core positioning to formulating typography hierarchies and color systems, I approach identity creation as a synthesis of psychology, visual precision, and strategic communication.",
     bullets: [
       "Defining core brand positioning, values, and distinct tone of voice that set initiatives apart",
       "Designing unified visual languages across logos, typography, color palettes, and digital touchpoints",
       "Directing creative concepts that turn abstract ideas into recognizable, evocative visual identities (e.g. OFFSCRIPT, VÉLORA)",
-      "Studying audience engagement patterns and creative communication strategies"
+      "Publishing documented design guidelines for consistent multi-platform application"
     ],
     iconName: "Palette",
     featured: true
   },
   {
-    id: "creative-writing",
+    id: "creative-technology",
     dimensionNumber: "02",
-    title: "Creative Writing & Prose",
-    tag: "NARRATIVE & CLARITY",
-    summary: "Personal expression through essays, technology critique, storytelling, and reflective prose.",
-    details: "Writing is my primary medium for clarifying thinking, deconstructing algorithmic complexity, and exploring human perspective. Whether drafting essays on technology culture or reflective notes, I care deeply about cadence, precision, and voice.",
+    title: "Creative Technology & Prototyping",
+    tag: "INTERACTIVE LOGIC",
+    summary: "Bridging computational logic and sensory interfaces through exploratory frontend code and hardware prototypes.",
+    details: "Exploring the boundary where code becomes a sensory experience. I experiment with reactive motion, procedural canvas graphics, sensory telemetry, and tactile digital micro-interactions that make software feel alive.",
     bullets: [
-      "Authoring reflective essays on technology, human systems, and digital culture",
-      "Deconstructing complex software architectures into lucid, engaging written prose",
-      "Focusing on editorial cadence, tone, and finding the exact right word to make ideas stick"
+      "Building high-fidelity interactive prototypes to test usability, feedback loops, and spatial transitions",
+      "Experimenting with vector mathematics, SVG motion curves, and real-time state visualization",
+      "Connecting hardware sensor streams (e.g. simulated ESP32 in BorderPulse) to reactive web dashboards"
+    ],
+    iconName: "Sparkles"
+  },
+  {
+    id: "ui-ux-architecture",
+    dimensionNumber: "03",
+    title: "UI/UX Architecture & Design Systems",
+    tag: "PRODUCT DESIGN",
+    summary: "Engineering accessible, scalable design token systems, component libraries, and intuitive user journeys.",
+    details: "Great interface design requires the rigor of an engineer and the empathy of a designer. I structure systematic token architectures (color, typography, spacing) that bridge design files and production code seamlessly.",
+    bullets: [
+      "Translating complex user journeys into friction-free, intuitive mental models and responsive layouts",
+      "Establishing strict design tokens ensuring consistent spacing, contrast ratios, and semantic hierarchy",
+      "Optimizing interface ergonomics for keyboard accessibility, screen readers, and low-latency feedback"
+    ],
+    iconName: "Layers"
+  },
+  {
+    id: "technical-storytelling",
+    dimensionNumber: "04",
+    title: "Technical Writing & Editorial Communication",
+    tag: "EDITORIAL CLARITY",
+    summary: "Deconstructing complex system architectures into lucid documentation, technical case studies, and editorial prose.",
+    details: "Clarity of code is meaningless without clarity of thought. I treat documentation and technical writing as primary engineering deliverables—deconstructing complex AI heuristics, state machines, and design decisions into compelling narratives.",
+    bullets: [
+      "Authoring comprehensive 15-part technical case studies documenting architecture, trade-offs, and results",
+      "Deconstructing distributed systems and machine learning heuristics into lucid visual and written explanations",
+      "Maintaining rigorous documentation standards across open-source repositories and hackathon builds"
     ],
     iconName: "PenTool"
-  },
-  {
-    id: "content-creation",
-    dimensionNumber: "03",
-    title: "Content Creation & Media",
-    tag: "DIGITAL STORYTELLING",
-    summary: "Developing content concepts, visual pacing, and digital formats that authentically engage.",
-    details: "I experiment with digital storytelling formats that bridge the gap between technical insight and creative engagement. It is about understanding what captures attention honestly and structuring layouts that reward the viewer's curiosity.",
-    bullets: [
-      "Brainstorming and developing creative concepts and digital content formats from seed ideas to final layouts",
-      "Structuring visual narratives with intentional editorial hierarchy, typographic rhythm, and visual interest",
-      "Exploring digital storytelling methods that authentically inform, captivate, and connect with technical communities"
-    ],
-    iconName: "Video"
-  },
-  {
-    id: "photography",
-    dimensionNumber: "04",
-    title: "Photography & Visual Storytelling",
-    tag: "FRAME & LIGHT",
-    summary: "Exploring composition, architectural lines, natural light, and quiet candid moments.",
-    details: "Behind the lens, I look for geometry, light, and symmetry in everyday urban landscapes and campus environments. Photography trains my eye for negative space, balance, and color harmony in digital design.",
-    bullets: [
-      "Capturing architectural geometry, light refractions, and urban textures",
-      "Informing digital interface spacing and composition through real-world visual framing",
-      "Curating candid observational photography that values natural atmosphere over heavy filters"
-    ],
-    iconName: "Camera"
-  },
-  {
-    id: "music",
-    dimensionNumber: "05",
-    title: "Music & Acoustic Cadence",
-    tag: "PERSONAL INSPIRATION",
-    summary: "A personal hobby and continuous source of creative inspiration, mood, and rhythm.",
-    details: "Music is an indispensable creative sanctuary. Listening across diverse genres sets the tempo for late-night problem solving, sparks unexpected visual associations, and provides acoustic focus for deep work.",
-    bullets: [
-      "A personal hobby and lifelong passion exploring diverse musical styles, instruments, and moods",
-      "An endless reservoir of creative energy that sparks visual ideas and sets the rhythm for thinking",
-      "Acoustic atmosphere that fuels intense creative sprints and thoughtful contemplation"
-    ],
-    iconName: "Headphones"
   }
 ];
 
