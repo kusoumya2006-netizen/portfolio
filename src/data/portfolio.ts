@@ -579,38 +579,13 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: "borderpulse",
-    status: "ACADEMIC",
-    discipline: "CREATIVE TECHNOLOGY",
-    classification: "Academic",
-    teamOrSolo: "Team",
-    originality: "Academic IoT Simulation",
-    number: "07",
-    name: "BorderPulse",
-    shortDesc: "IoT Border Monitoring System with Simulated Sensors",
-    fullDesc: "A border surveillance and intrusion detection prototype combining computer vision (YOLO), simulated hardware sensor telemetry (ESP32) and cloud storage.",
-    problem: "Perimeter monitoring in remote zones requires low-latency alerting combining both visual object detection and physical sensor triggers.",
-    contribution: [
-      "Configured YOLO object detection for perimeter intrusion recognition",
-      "Simulated ESP32 IoT sensor feeds and telemetry streaming",
-      "Built FastAPI ingestion service connected to Supabase"
-    ],
-    tech: ["YOLO", "Python", "FastAPI", "Supabase", "ESP32 (Simulated)"],
-    category: ["All", "IoT", "AI & ML"],
-    github: null,
-    demo: null,
-    metrics: "Hardware & Vision Prototype",
-    featured: false,
-    accentColor: "#9AA58B"
-  },
-  {
     id: "amuseme",
     status: "COMPLETED",
     discipline: "ENGINEERING",
     classification: "Secondary",
     teamOrSolo: "Individual",
     originality: "Coursework Reservation Application",
-    number: "08",
+    number: "07",
     name: "AmuseMe Park",
     shortDesc: "Amusement Park Ticket Booking & Reservation Platform",
     fullDesc: "A responsive ticket reservation web application with real-time pass selection, schedule management and Firebase authentication/database integration.",
@@ -629,38 +604,13 @@ export const PROJECTS: Project[] = [
     accentColor: "#B5B5AD"
   },
   {
-    id: "library",
-    status: "COMPLETED",
-    discipline: "ENGINEERING",
-    classification: "Academic",
-    teamOrSolo: "Individual",
-    originality: "C++ Systems & Data Structures",
-    number: "09",
-    name: "Smart Library Management",
-    shortDesc: "High-Performance Systems Catalog in C++",
-    fullDesc: "A classic C++ library management application utilizing efficient data structures and file I/O for book indexing, patron tracking and borrow transactions.",
-    problem: "Managing catalog inventory and rapid search requires fundamental algorithmic precision without heavy runtime overhead.",
-    contribution: [
-      "Implemented custom data structures for book records and indexing",
-      "Structured fast search, issuance and return workflows",
-      "Handled persistent file serialization"
-    ],
-    tech: ["C++", "Data Structures", "File I/O"],
-    category: ["All", "Systems"],
-    github: null,
-    demo: null,
-    metrics: "C++ Core Algorithms",
-    featured: false,
-    accentColor: "#D8D0BD"
-  },
-  {
     id: "cropweed",
     status: "EXPERIMENTAL",
     discipline: "ARTIFICIAL INTELLIGENCE",
     classification: "Exploratory",
     teamOrSolo: "Individual",
     originality: "Computer Vision Course Exploration",
-    number: "10",
+    number: "08",
     name: "Crop & Weed Detection",
     shortDesc: "Computer Vision & Agricultural Precision Prototype",
     fullDesc: "A computer-vision and machine learning prototype exploring morphological differentiation between crops and invasive weeds to support precision agricultural workflows.",
@@ -1092,7 +1042,7 @@ export const CREATIVE_FREQUENCIES: CreativeFrequency[] = [
     bullets: [
       "Building high-fidelity interactive prototypes to test usability, feedback loops, and spatial transitions",
       "Experimenting with vector mathematics, SVG motion curves, and real-time state visualization",
-      "Connecting hardware sensor streams (e.g. simulated ESP32 in BorderPulse) to reactive web dashboards"
+      "Connecting interactive canvas telemetry and state machines to reactive web dashboards"
     ],
     iconName: "Sparkles"
   },
@@ -1132,10 +1082,10 @@ export const SKILL_CATEGORIES = [
     title: "Programming Languages",
     description: "Core languages used across backend systems, algorithms, and application logic.",
     skills: [
-      { name: "Python", projectIds: ["nexora", "vyra", "cropweed", "borderpulse"] },
+      { name: "Python", projectIds: ["nexora", "vyra", "cropweed"] },
       { name: "TypeScript", projectIds: ["convera", "resumatch", "portfolio"] },
-      { name: "Java", projectIds: ["library"] },
-      { name: "C / C++", projectIds: ["library"] },
+      { name: "Java", projectIds: ["convera", "amuseme"] },
+      { name: "C / C++", projectIds: ["convera", "amuseme"] },
       { name: "SQL", projectIds: ["convera"] }
     ]
   },
@@ -1158,7 +1108,7 @@ export const SKILL_CATEGORIES = [
     title: "Backend Development",
     description: "API architecture, service layer orchestration, and server-side runtime services.",
     skills: [
-      { name: "FastAPI", projectIds: ["nexora", "vyra", "borderpulse"] },
+      { name: "FastAPI", projectIds: ["nexora", "vyra"] },
       { name: "Node.js", projectIds: ["netwatch"] },
       { name: "Express", projectIds: ["netwatch"] },
       { name: "RESTful APIs", projectIds: ["nexora", "vyra", "netwatch"] },
@@ -1171,7 +1121,7 @@ export const SKILL_CATEGORIES = [
     description: "Relational, document, and timeseries persistence layers with cloud hosting.",
     skills: [
       { name: "PostgreSQL", projectIds: ["convera"] },
-      { name: "Supabase", projectIds: ["convera", "borderpulse"] },
+      { name: "Supabase", projectIds: ["convera"] },
       { name: "MongoDB Atlas", projectIds: ["netwatch"] },
       { name: "Mongoose ODM", projectIds: ["netwatch"] },
       { name: "Firebase Firestore", projectIds: ["amuseme"] }
@@ -1186,7 +1136,7 @@ export const SKILL_CATEGORIES = [
       { name: "NLP & TF-IDF", projectIds: ["resumatch", "vyra", "nexora"] },
       { name: "Cosine Similarity Matching", projectIds: ["resumatch"] },
       { name: "Rule-Based Heuristic Classifiers", projectIds: ["nexora"] },
-      { name: "Computer Vision & YOLO", projectIds: ["borderpulse", "cropweed"] }
+      { name: "Computer Vision & YOLO", projectIds: ["cropweed"] }
     ]
   },
   {
@@ -1194,11 +1144,11 @@ export const SKILL_CATEGORIES = [
     title: "Computer Science Fundamentals",
     description: "Core academic foundational pillars studied rigorously at SVCE.",
     skills: [
-      { name: "Data Structures & Algorithms", projectIds: ["library", "convera"] },
+      { name: "Data Structures & Algorithms", projectIds: ["convera", "amuseme"] },
       { name: "Database Management Systems (DBMS)", projectIds: ["convera", "netwatch"] },
       { name: "Computer Networks & Telemetry", projectIds: ["netwatch"] },
-      { name: "Object-Oriented Programming (OOP)", projectIds: ["library", "convera"] },
-      { name: "Operating Systems Principles", projectIds: ["library"] }
+      { name: "Object-Oriented Programming (OOP)", projectIds: ["convera", "amuseme"] },
+      { name: "Operating Systems Principles", projectIds: ["netwatch"] }
     ]
   },
   {

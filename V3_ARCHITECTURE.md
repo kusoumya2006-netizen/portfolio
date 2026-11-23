@@ -43,10 +43,10 @@ The Project Atlas (`#atlas`) categorizes all verified work into four distinct di
         ┌──────────────┬───────────────┴───────────────┬──────────────┐
         ▼              ▼                               ▼              ▼
   [ ENGINEERING ]   [ ARTIFICIAL INTELLIGENCE ]   [ DESIGN & BRAND ]  [ CREATIVE TECH ]
-   • CONVERA        • NEXORA (Voice Clone AI)       • OFFSCRIPT        • BorderPulse (IoT)
+   • CONVERA        • NEXORA (Voice Clone AI)       • OFFSCRIPT        • Mission: Find Nemo
    • NetWatch       • VYRA (Scam Detection)         • VÉLORA           • Interactive UI
-   • Smart Library  • ResuMatch AI (NLP Matching)   • QCIC Brand Mark  • Token Systems
-   • AmuseMe Park   • Crop & Weed Vision            • STTP Series      • SVCE Insignia
+   • AmuseMe Park   • ResuMatch AI (NLP Matching)   • QCIC Brand Mark  • Token Systems
+                    • Crop & Weed Vision            • STTP Series      • SVCE Insignia
 ```
 
 ### Differentiated Project Card Architecture

@@ -110,22 +110,7 @@
 
 ## 2. Secondary & Academic Engineering Projects
 
-### PRJ-06: BorderPulse
-- **Category**: IoT / Computer Vision / Edge Systems
-- **Project Type**: ACADEMIC / EXPERIMENTAL (Hardware & Vision simulation)
-- **Completion Status**: PROTOTYPE
-- **Originality & Ownership**: Academic coursework exploration
-- **Team or Individual**: Collaborative Academic Project
-- **Individual Contribution**: YOLO model bounding box exploration, FastAPI telemetry receiver, simulated ESP32 sensor feeds
-- **Technology**: YOLO, Python, FastAPI, Supabase, ESP32 (Simulated)
-- **Available Source Assets**: Academic code repository
-- **GitHub Repository**: Repository in archive
-- **Live Demonstration**: None
-- **Documentation Completeness**: LOW-MEDIUM
-- **Missing Evidence**: Physical hardware deployment logs
-- **Recommended Presentation Format**: Secondary Academic Project card with clear "Prototype" label.
-
-### PRJ-07: AmuseMe Park
+### PRJ-06: AmuseMe Park
 - **Category**: Full Stack / Web Application
 - **Project Type**: ACADEMIC / COURSEWORK
 - **Completion Status**: COMPLETED (Coursework project)
@@ -135,16 +120,7 @@
 - **Documentation Completeness**: MEDIUM
 - **Recommended Presentation Format**: Secondary Project card in Project Atlas.
 
-### PRJ-08: Smart Library Management
-- **Category**: Systems / Core Computer Science
-- **Project Type**: ACADEMIC
-- **Completion Status**: COMPLETED (Academic assignment)
-- **Originality & Ownership**: Data structures coursework project
-- **Technology**: C++, Object-Oriented Programming, File I/O
-- **Documentation Completeness**: MEDIUM
-- **Recommended Presentation Format**: Core CS proof of fundamentals in Project Atlas.
-
-### PRJ-09: Crop & Weed Detection
+### PRJ-07: Crop & Weed Detection
 - **Category**: Computer Vision / Agriculture
 - **Project Type**: ACADEMIC / EXPERIMENTAL
 - **Completion Status**: EXPERIMENTAL
