@@ -106,20 +106,20 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="flex flex-wrap items-center gap-4 mb-10"
             >
-              <Link
-                to="/works"
+              <a
+                href="#works"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-sage text-pine font-semibold text-sm rounded-full hover:bg-sage/90 transition-all hover:gap-3 shadow-lg shadow-sage/15 group"
               >
-                <span>Explore My Work</span>
+                <span>Explore Selected Work</span>
                 <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
+              </a>
 
-              <Link
-                to="/about"
+              <a
+                href="#about"
                 className="inline-flex items-center gap-2 px-6 py-3.5 glass-panel border border-sage/30 text-ivory font-medium text-sm rounded-full hover:border-sage hover:bg-sage/10 transition-all"
               >
-                <span>About Me</span>
-              </Link>
+                <span>About Identity</span>
+              </a>
 
               <a
                 href={PROFILE.contact.resume}

@@ -38,6 +38,42 @@ export interface Profile {
   humanInterests: string[];
 }
 
+export interface CaseStudyData {
+  overview?: string;
+  context?: string;
+  problemStatement?: string;
+  objectives?: string[];
+  researchAndExploration?: string;
+  conceptDevelopment?: string;
+  architectureOrProcess?: {
+    summary?: string;
+    diagramDescription?: string;
+    modules?: { name: string; description: string; tech?: string }[];
+  };
+  toolsAndTechnologies?: { category: string; items: string[] }[];
+  implementationDetails?: string[];
+  individualContribution?: string[];
+  challenges?: string[];
+  decisionsAndTradeoffs?: { decision: string; rationale: string; impact?: string }[];
+  finalOutcome?: string;
+  learnings?: string[];
+  links?: { label: string; url: string; type: 'github' | 'demo' | 'behance' | 'canva' | 'external' }[];
+}
+
+export interface DesignCaseStudyData {
+  creativeBrief?: string;
+  designObjective?: string;
+  targetAudience?: string;
+  conceptDevelopment?: string;
+  typographySystem?: { role: string; font: string; usage: string }[];
+  colorPalette?: { name: string; hex: string; role: string }[];
+  visualLanguage?: string;
+  execution?: string[];
+  finalApplications?: string[];
+  behanceUrl?: string;
+  canvaUrl?: string;
+}
+
 export interface Project {
   id: string;
   number: string;
@@ -53,6 +89,8 @@ export interface Project {
   metrics?: string;
   featured: boolean;
   accentColor: string;
+  image?: string;
+  caseStudy?: CaseStudyData;
 }
 
 export interface DesignWork {
@@ -78,6 +116,7 @@ export interface DesignWork {
   gallery?: { label: string; url: string }[];
   brandMessage?: string;
   behanceUrl?: string | null;
+  caseStudy?: DesignCaseStudyData;
 }
 
 export interface JourneyItem {

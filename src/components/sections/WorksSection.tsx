@@ -124,15 +124,23 @@ export default function WorksSection({ featured = false }: { featured?: boolean 
 
               {/* Bottom Actions */}
               <div className="pt-4 border-t border-sage/15 flex items-center justify-between">
-                <button
-                  onClick={() => setActiveModalProject(project)}
-                  className="text-xs font-mono uppercase tracking-wider text-sage hover:text-ivory flex items-center gap-1.5 transition-colors"
+                <Link
+                  to={`/works/${project.id}`}
+                  className="text-xs font-mono uppercase tracking-wider text-sage hover:text-champagne flex items-center gap-1.5 transition-colors font-semibold"
                 >
-                  <span>Case Study</span>
+                  <span>Read Case Study</span>
                   <ArrowUpRight size={13} />
-                </button>
+                </Link>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setActiveModalProject(project)}
+                    className="text-[11px] font-mono text-ivory/50 hover:text-ivory px-2 py-1 rounded glass-panel"
+                    title="Quick preview modal"
+                  >
+                    Quick View
+                  </button>
+
                   {project.github && (
                     <a
                       href={project.github}
@@ -250,13 +258,21 @@ export default function WorksSection({ featured = false }: { featured?: boolean 
               </div>
 
               {/* Links */}
-              <div className="flex flex-wrap gap-4 pt-6 border-t border-sage/20">
+              <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-sage/20">
+                <Link
+                  to={`/works/${activeModalProject.id}`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sage text-pine text-xs font-semibold hover:bg-sage/90 transition-colors shadow-md"
+                >
+                  <span>Open Complete Case Study</span>
+                  <ArrowUpRight size={14} />
+                </Link>
+
                 {activeModalProject.github && (
                   <a
                     href={activeModalProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-sage text-pine text-xs font-semibold hover:bg-sage/90 transition-colors shadow-md"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-sage/30 text-ivory text-xs font-semibold hover:border-sage transition-colors"
                   >
                     <Github size={14} />
                     <span>View Repository</span>
@@ -268,7 +284,7 @@ export default function WorksSection({ featured = false }: { featured?: boolean 
                     href={activeModalProject.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-panel border border-sage/40 text-ivory text-xs font-semibold hover:border-sage transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-sage/40 text-ivory text-xs font-semibold hover:border-sage transition-colors"
                   >
                     <ExternalLink size={14} className="text-sage" />
                     <span>Live Demo</span>
