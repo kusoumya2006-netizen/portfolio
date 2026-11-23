@@ -10,6 +10,7 @@ import {
   AlertCircle
 } from 'lucide-react'
 import { PROJECTS, DESIGN_WORKS } from '../../data/portfolio'
+import { ProjectDiscipline } from '../../types/portfolio'
 
 type UnifiedItem = {
   id: string
@@ -17,7 +18,7 @@ type UnifiedItem = {
   name: string
   shortDesc: string
   category: string
-  discipline: 'Engineering' | 'Creative' | 'Cross-Disciplinary'
+  discipline: ProjectDiscipline
   status: 'COMPLETED' | 'ONGOING' | 'PROTOTYPE' | 'EXPERIMENTAL' | 'ACADEMIC'
   classification: string
   tech: string[]
@@ -50,7 +51,7 @@ export default function ProjectAtlas() {
         name: p.name,
         shortDesc: p.shortDesc,
         category: p.category.filter(c => c !== 'All')[0] || 'Software',
-        discipline: p.discipline || (p.id === 'offscript' ? 'Creative' : 'Engineering'),
+        discipline: p.discipline || 'ENGINEERING',
         status: p.status || 'COMPLETED',
         classification: p.classification || 'Flagship',
         tech: p.tech,
@@ -67,13 +68,14 @@ export default function ProjectAtlas() {
     // Design works not already represented
     DESIGN_WORKS.forEach(d => {
       if (!list.some(item => item.id === d.id)) {
+        const isCreativeTech = d.id === 'mission-find-nemo'
         list.push({
           id: d.id,
           number: d.number,
           name: d.name,
           shortDesc: d.shortDesc,
           category: d.category,
-          discipline: 'Creative',
+          discipline: isCreativeTech ? 'CREATIVE TECHNOLOGY' : 'DESIGN AND BRAND IDENTITY',
           status: 'COMPLETED',
           classification: d.isIdentity ? 'Brand Identity' : 'Visual Campaign',
           tech: d.tools.split(' · '),
@@ -142,6 +144,14 @@ export default function ProjectAtlas() {
     }
   }
 
+  const disciplineTabs = [
+    { label: 'All Disciplines', value: 'All' },
+    { label: 'ENGINEERING', value: 'ENGINEERING' },
+    { label: 'ARTIFICIAL INTELLIGENCE', value: 'ARTIFICIAL INTELLIGENCE' },
+    { label: 'DESIGN AND BRAND IDENTITY', value: 'DESIGN AND BRAND IDENTITY' },
+    { label: 'CREATIVE TECHNOLOGY', value: 'CREATIVE TECHNOLOGY' }
+  ]
+
   return (
     <section id="atlas" className="py-24 px-6 relative matrix-dots">
       <div className="max-w-7xl mx-auto">
@@ -150,7 +160,7 @@ export default function ProjectAtlas() {
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-sage/30 text-xs font-mono uppercase text-sage mb-4">
             <SlidersHorizontal size={13} />
-            <span>Interactive Project Atlas · Comprehensive Work Directory</span>
+            <span>Interactive Project Atlas · The Complete Work Directory</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-6xl text-ivory tracking-tight mb-4">
@@ -158,7 +168,7 @@ export default function ProjectAtlas() {
           </h2>
 
           <p className="text-ivory/60 text-base max-w-3xl font-sans leading-relaxed">
-            Search, filter, and inspect Soumya Kumar's full spectrum of work across engineering prototypes, published brand systems, systems tooling, and academic research. Every project includes honest completion status, architecture notes, and verified links.
+            Search, filter, and inspect Soumya Kumar's full spectrum of work across engineering systems, artificial intelligence pipelines, published brand identities, and creative technology explorations. Every project features verified contributions and architectural documentation.
           </p>
         </div>
 
@@ -172,7 +182,7 @@ export default function ProjectAtlas() {
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search by project name, keywords, or tech stack (e.g. CONVERA, FastAPI, TypeScript, Branding)..."
+              placeholder="Search by project name, keywords, or tech stack (e.g. CONVERA, NEXORA, OFFSCRIPT, FastAPI)..."
               className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-pine/90 border border-sage/30 text-ivory placeholder:text-ivory/40 text-sm font-sans focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage transition-all"
             />
             {searchQuery && (
@@ -185,35 +195,35 @@ export default function ProjectAtlas() {
             )}
           </div>
 
-          {/* Bottom Row: Filter Controls */}
-          <div className="grid md:grid-cols-3 gap-6 pt-4 border-t border-sage/15">
-            
-            {/* 1. Discipline Filter */}
-            <div>
-              <label className="text-[11px] font-mono uppercase tracking-wider text-sage font-semibold block mb-2">
-                Discipline Pathway
-              </label>
-              <div className="flex flex-wrap gap-1.5">
-                {['All', 'Engineering', 'Creative'].map(disc => (
-                  <button
-                    key={disc}
-                    onClick={() => setSelectedDiscipline(disc)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
-                      selectedDiscipline === disc
-                        ? 'bg-sage text-pine font-bold shadow-md'
-                        : 'glass-panel text-ivory/70 hover:text-ivory'
-                    }`}
-                  >
-                    {disc}
-                  </button>
-                ))}
-              </div>
+          {/* Discipline Filter Tabs: The 4 Core Disciplines */}
+          <div>
+            <label className="text-[11px] font-mono uppercase tracking-wider text-sage font-semibold block mb-2.5">
+              Filter by Core Discipline
+            </label>
+            <div className="flex flex-wrap gap-2">
+              {disciplineTabs.map(tab => (
+                <button
+                  key={tab.value}
+                  onClick={() => setSelectedDiscipline(tab.value)}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all duration-200 ${
+                    selectedDiscipline === tab.value
+                      ? 'bg-sage text-pine font-bold shadow-md shadow-sage/15 ring-1 ring-sage'
+                      : 'glass-panel text-ivory/70 hover:text-ivory hover:border-sage/40'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
             </div>
+          </div>
 
-            {/* 2. Completion Status Filter */}
+          {/* Secondary Controls: Status and Technology */}
+          <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-sage/15">
+            
+            {/* Completion Status Filter */}
             <div>
               <label className="text-[11px] font-mono uppercase tracking-wider text-sage font-semibold block mb-2">
-                Status Classification
+                Project Status Classification
               </label>
               <div className="flex flex-wrap gap-1.5">
                 {['All', 'COMPLETED', 'PROTOTYPE', 'ACADEMIC'].map(st => (
@@ -226,16 +236,16 @@ export default function ProjectAtlas() {
                         : 'glass-panel text-ivory/70 hover:text-ivory'
                     }`}
                   >
-                    {st === 'All' ? 'All' : st}
+                    {st === 'All' ? 'All Statuses' : st}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* 3. Tech Stack Quick Pill */}
+            {/* Tech Stack Quick Dropdown */}
             <div>
               <label className="text-[11px] font-mono uppercase tracking-wider text-sage font-semibold block mb-2">
-                Tech / Tool
+                Technology / Tool Filter
               </label>
               <select
                 value={selectedTech}
@@ -253,7 +263,7 @@ export default function ProjectAtlas() {
           </div>
 
           {/* Active Filter Metrics */}
-          <div className="flex items-center justify-between text-xs font-mono text-ivory/50 pt-2">
+          <div className="flex items-center justify-between text-xs font-mono text-ivory/50 pt-2 border-t border-sage/10">
             <span>
               Showing <span className="text-sage font-bold">{filteredItems.length}</span> of {allItems.length} verified projects
             </span>
@@ -294,7 +304,7 @@ export default function ProjectAtlas() {
                     <div className="flex items-center gap-2">
                       <span className="text-sage font-bold">PRJ-{item.number}</span>
                       <span className="text-ivory/20">/</span>
-                      <span className="text-ivory/60 text-[11px] uppercase">{item.category}</span>
+                      <span className="text-ivory/60 text-[10px] uppercase truncate max-w-[130px]">{item.discipline}</span>
                     </div>
 
                     <span className={`text-[10px] font-mono uppercase px-2 py-0.5 rounded-full border ${getStatusBadge(item.status)}`}>
@@ -391,7 +401,7 @@ export default function ProjectAtlas() {
           <div className="text-center py-16 glass-card rounded-3xl border border-sage/20 p-8">
             <AlertCircle size={32} className="text-sage mx-auto mb-3" />
             <h3 className="font-display text-xl text-ivory mb-2">No projects match the selected criteria</h3>
-            <p className="text-xs font-mono text-ivory/50 mb-4">Try clearing filters or searching for terms like "React", "Python", or "Brand".</p>
+            <p className="text-xs font-mono text-ivory/50 mb-4">Try clearing filters or searching for terms like "CONVERA", "NEXORA", "FastAPI", or "OFFSCRIPT".</p>
             <button
               onClick={() => {
                 setSearchQuery('')

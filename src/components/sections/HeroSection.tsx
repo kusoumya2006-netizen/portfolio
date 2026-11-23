@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { ArrowUpRight, Github, Linkedin, FileText, Sparkles, Code2 } from 'lucide-react'
+import { ArrowUpRight, Github, Linkedin, FileText, Sparkles } from 'lucide-react'
 import { PROFILE } from '../../data/portfolio'
 import SKMonogramLogo from '../ui/SKMonogramLogo'
 import CSEProcessorInsignia from '../ui/CSEProcessorInsignia'
@@ -34,30 +34,27 @@ export default function HeroSection() {
           {/* LEFT COLUMN — Editorial Headline & Storytelling (6 cols) */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             
-            {/* Top Active Track Pill + Processor Mini Badge */}
+            {/* Top Active Track Pill */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-4"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-sage/35 text-xs font-mono uppercase text-sage">
                 <span className="w-2 h-2 rounded-full bg-sage animate-pulse" />
-                <span>Creative Technologist Active</span>
+                <span>Creative Technologist · SVCE CSE 2028</span>
               </div>
-              <span className="text-[11px] font-mono text-ivory/40 uppercase tracking-widest hidden sm:inline">
-                SVCE · CSE 2028
-              </span>
             </motion.div>
 
-            {/* Sub-eyebrow */}
+            {/* Author Name */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xs uppercase tracking-[0.25em] text-ivory/50 font-mono mb-4"
+              className="text-xs uppercase tracking-[0.3em] text-ivory/60 font-mono mb-2"
             >
-              Computer Science · Systems · AI &amp; Visual Design
+              SOUMYA KUMAR
             </motion.p>
 
             {/* Main Statement Typography */}
@@ -65,135 +62,99 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="font-display leading-[0.95] mb-8 tracking-tight"
+              className="font-display leading-[0.95] mb-6 tracking-tight"
             >
-              <span className="block text-[clamp(3.2rem,6.8vw,5.8rem)] text-ivory font-bold">
-                Creative
+              <span className="block text-[clamp(2.6rem,5.5vw,4.8rem)] text-ivory font-bold">
+                A DIFFERENT STATE
               </span>
-              <span className="block text-[clamp(3.2rem,6.8vw,5.8rem)] text-ivory font-bold">
-                mind.
-              </span>
-              <span className="block text-[clamp(3.2rem,6.8vw,5.8rem)] text-ivory/90 font-bold">
-                Engineering
-              </span>
-              <span className="block text-[clamp(3.2rem,6.8vw,5.8rem)] text-sage/85 italic font-normal">
-                mindset.
+              <span className="block text-[clamp(2.6rem,5.5vw,4.8rem)] text-sage italic font-normal">
+                OF THINKING.
               </span>
             </motion.h1>
 
-            {/* Editorial Quotation Card with Left Border */}
+            {/* Concise Introduction */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="relative pl-5 border-l-2 border-sage/50 max-w-xl mb-10"
+              className="relative pl-5 border-l-2 border-sage/50 max-w-xl mb-8"
             >
-              <p className="text-ivory/70 text-base md:text-lg font-normal leading-relaxed italic">
-                "{PROFILE.bio}"
+              <p className="text-ivory/80 text-base md:text-lg font-normal leading-relaxed">
+                Computer Science undergraduate at Sri Venkateswara College of Engineering. I combine engineering logic with creative instinct—architecting resilient software systems, explainable AI heuristics, and studio-grade visual identities.
               </p>
               <div className="flex items-center gap-3 mt-3 text-xs font-mono text-ivory/40 tracking-wider">
-                <span>{PROFILE.education.institution}</span>
+                <span>SVCE · Pennalur</span>
                 <span>·</span>
-                <span className="text-sage">CGPA: {PROFILE.education.cgpa.split(' ')[0]}</span>
+                <span className="text-sage">CGPA: 7.2 / 10.0</span>
               </div>
             </motion.div>
 
-            {/* Call To Action Buttons */}
+            {/* The Three Pathways: EXPLORE ENGINEERING, EXPLORE DESIGN, DISCOVER MY WORK */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 mb-6"
+              className="flex flex-wrap items-center gap-3 mb-6"
             >
               <a
                 href="#works"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-sage text-pine font-semibold text-sm rounded-full hover:bg-sage/90 transition-all hover:gap-3 shadow-lg shadow-sage/15 group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-sage text-pine font-mono font-bold text-xs uppercase tracking-wider rounded-full hover:bg-sage/90 transition-all shadow-lg shadow-sage/15 group"
               >
-                <span>Explore Selected Work</span>
-                <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <span>EXPLORE ENGINEERING</span>
+                <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
               <a
-                href="#about"
-                className="inline-flex items-center gap-2 px-6 py-3.5 glass-panel border border-sage/30 text-ivory font-medium text-sm rounded-full hover:border-sage hover:bg-sage/10 transition-all"
+                href="#design"
+                className="inline-flex items-center gap-2 px-6 py-3.5 glass-panel border border-sage/40 text-ivory font-mono font-semibold text-xs uppercase tracking-wider rounded-full hover:border-sage hover:bg-sage/10 transition-all shadow-md group"
               >
-                <span>About Identity</span>
+                <span>EXPLORE DESIGN</span>
+                <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
               <a
-                href={PROFILE.contact.resume}
-                download="Soumya_K_Resume_Updated_CONVERA(2).pdf"
-                className="inline-flex items-center gap-2 px-5 py-3.5 glass-panel border border-ivory/20 text-ivory/80 font-medium text-sm rounded-full hover:text-ivory hover:border-sage/40 transition-all"
-                aria-label="Download Soumya's Resume PDF"
+                href="#atlas"
+                className="inline-flex items-center gap-2 px-5 py-3.5 glass-card border border-champagne/40 text-champagne font-mono font-semibold text-xs uppercase tracking-wider rounded-full hover:border-champagne hover:bg-champagne/10 transition-all shadow-md"
               >
-                <FileText size={15} className="text-sage" />
-                <span>Resume</span>
+                <span>DISCOVER MY WORK</span>
               </a>
             </motion.div>
 
-            {/* Dual Discovery Pathways: Path A (Engineering) & Path B (Creative) */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.45 }}
-              className="p-3.5 rounded-2xl glass-card border border-sage/25 max-w-xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#0a1410]/80"
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sage animate-ping" />
-                <span className="text-[10px] font-mono uppercase tracking-widest text-sage font-bold">
-                  DISCOVERY PATHWAYS:
-                </span>
-              </div>
-              <div className="flex items-center gap-2 w-full sm:w-auto">
-                <a
-                  href="#works"
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-pine border border-sage/35 text-ivory text-xs font-mono hover:border-sage hover:text-sage transition-all"
-                >
-                  <Code2 size={13} className="text-sage" />
-                  <span>Path A: Engineering</span>
-                </a>
-                <a
-                  href="#design"
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-pine border border-sage/35 text-champagne text-xs font-mono hover:border-sage hover:text-ivory transition-all"
-                >
-                  <Sparkles size={13} className="text-champagne" />
-                  <span>Path B: Creative</span>
-                </a>
-                <a
-                  href="#atlas"
-                  className="inline-flex items-center justify-center px-2.5 py-1.5 rounded-xl glass-panel text-[11px] font-mono text-ivory/60 hover:text-ivory hover:border-sage/40 transition-all"
-                  title="Full Interactive Project Atlas"
-                >
-                  Atlas
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Social Links */}
+            {/* Utility Links: Resume, GitHub, LinkedIn */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex items-center gap-6 text-xs text-ivory/50 font-mono tracking-wider"
+              className="flex flex-wrap items-center gap-5 text-xs text-ivory/60 font-mono tracking-wider pt-2 border-t border-sage/15 max-w-xl"
             >
               <a
-                href={PROFILE.contact.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-sage transition-colors"
+                href={PROFILE.contact.resume}
+                download="Soumya_K_Resume_Updated_CONVERA(2).pdf"
+                className="inline-flex items-center gap-1.5 hover:text-sage transition-colors font-semibold text-ivory/80"
+                aria-label="Download Soumya's Resume PDF"
               >
-                <Linkedin size={14} />
-                <span>linkedin/soumyakumar-dev</span>
+                <FileText size={14} className="text-sage" />
+                <span>Resume (PDF)</span>
               </a>
               <span className="text-sage/30">/</span>
               <a
                 href={PROFILE.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:text-sage transition-colors"
+                className="inline-flex items-center gap-1.5 hover:text-sage transition-colors"
               >
                 <Github size={14} />
-                <span>github/kusoumya2006</span>
+                <span>GitHub</span>
+              </a>
+              <span className="text-sage/30">/</span>
+              <a
+                href={PROFILE.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 hover:text-sage transition-colors"
+              >
+                <Linkedin size={14} />
+                <span>LinkedIn</span>
               </a>
             </motion.div>
 

@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
   {
     id: "convera",
     status: "PROTOTYPE",
-    discipline: "Engineering",
+    discipline: "ENGINEERING",
     classification: "Flagship",
     teamOrSolo: "Team",
     originality: "Original SIH 2026 Prototype",
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
   {
     id: "nexora",
     status: "PROTOTYPE",
-    discipline: "Engineering",
+    discipline: "ARTIFICIAL INTELLIGENCE",
     classification: "Flagship",
     teamOrSolo: "Team",
     originality: "Original SIH 2026 AI Prototype",
@@ -234,7 +234,7 @@ export const PROJECTS: Project[] = [
   {
     id: "resumatch",
     status: "PROTOTYPE",
-    discipline: "Engineering",
+    discipline: "ARTIFICIAL INTELLIGENCE",
     classification: "Flagship",
     teamOrSolo: "Individual",
     originality: "Original NLP Placement Tool",
@@ -322,7 +322,7 @@ export const PROJECTS: Project[] = [
   {
     id: "vyra",
     status: "PROTOTYPE",
-    discipline: "Engineering",
+    discipline: "ARTIFICIAL INTELLIGENCE",
     classification: "Flagship",
     teamOrSolo: "Individual",
     originality: "Original Scam Detection Pipeline",
@@ -408,7 +408,7 @@ export const PROJECTS: Project[] = [
   {
     id: "netwatch",
     status: "COMPLETED",
-    discipline: "Engineering",
+    discipline: "ENGINEERING",
     classification: "Flagship",
     teamOrSolo: "Individual",
     originality: "Original Network Telemetry Service",
@@ -494,7 +494,7 @@ export const PROJECTS: Project[] = [
   {
     id: "offscript",
     status: "COMPLETED",
-    discipline: "Creative",
+    discipline: "DESIGN AND BRAND IDENTITY",
     classification: "Brand Identity",
     teamOrSolo: "Individual",
     originality: "Original Creator Media Brand",
@@ -581,7 +581,7 @@ export const PROJECTS: Project[] = [
   {
     id: "borderpulse",
     status: "ACADEMIC",
-    discipline: "Engineering",
+    discipline: "CREATIVE TECHNOLOGY",
     classification: "Academic",
     teamOrSolo: "Team",
     originality: "Academic IoT Simulation",
@@ -606,7 +606,7 @@ export const PROJECTS: Project[] = [
   {
     id: "amuseme",
     status: "COMPLETED",
-    discipline: "Engineering",
+    discipline: "ENGINEERING",
     classification: "Secondary",
     teamOrSolo: "Individual",
     originality: "Coursework Reservation Application",
@@ -631,7 +631,7 @@ export const PROJECTS: Project[] = [
   {
     id: "library",
     status: "COMPLETED",
-    discipline: "Engineering",
+    discipline: "ENGINEERING",
     classification: "Academic",
     teamOrSolo: "Individual",
     originality: "C++ Systems & Data Structures",
@@ -656,7 +656,7 @@ export const PROJECTS: Project[] = [
   {
     id: "cropweed",
     status: "EXPERIMENTAL",
-    discipline: "Engineering",
+    discipline: "ARTIFICIAL INTELLIGENCE",
     classification: "Exploratory",
     teamOrSolo: "Individual",
     originality: "Computer Vision Course Exploration",

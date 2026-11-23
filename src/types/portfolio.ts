@@ -75,7 +75,11 @@ export interface DesignCaseStudyData {
 }
 
 export type ProjectStatus = 'COMPLETED' | 'ONGOING' | 'PROTOTYPE' | 'EXPERIMENTAL' | 'ACADEMIC';
-export type ProjectDiscipline = 'Engineering' | 'Creative' | 'Cross-Disciplinary';
+export type ProjectDiscipline =
+  | 'ENGINEERING'
+  | 'ARTIFICIAL INTELLIGENCE'
+  | 'DESIGN AND BRAND IDENTITY'
+  | 'CREATIVE TECHNOLOGY';
 export type ProjectClassification = 'Flagship' | 'Secondary' | 'Academic' | 'Exploratory' | 'Brand Identity';
 
 export interface Project {
